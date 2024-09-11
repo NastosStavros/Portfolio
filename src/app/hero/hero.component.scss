@@ -14,7 +14,14 @@
   justify-content: center;
   overflow: hidden; /* Verhindert das Überlappen von Inhalten außerhalb des Containers */
   height: 50vh;
+
+  /* Hintergrundbilder einfügen */
+  background-image: url('../../assets/backgrounds/purple1.png'), url('../../assets/backgrounds/green1.png');
+  background-position: left, right; /* Positioniert die Bilder links und rechts */
+  background-size: contain, contain; /* Stellt sicher, dass die Bilder vollständig angezeigt werden */
+  background-repeat: no-repeat, no-repeat; /* Verhindert das Wiederholen der Bilder */
 }
+
 
 .hero-img {
   width: 646px;
