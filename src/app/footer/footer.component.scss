@@ -1,66 +1,118 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 200px;
-    padding: 20px 10%;
-    border-top: 6px solid #70E61C; /* Hellgrüner oberer Rand */
-    background-color: #141D2F; /* Gleiche Hintergrundfarbe wie die Kontaktsektion */
-    color: white;
-    font-family: 'Poppins', sans-serif;
-  
-    .footer-left,
-    .footer-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  padding: 20px 10%;
+  border-top: 6px solid #70E61C;
+  background-color: #141D2F;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  flex-wrap: wrap; /* Ermöglicht das Umbruchverhalten für kleinere Bildschirme */
+  text-align: center;
+}
 
-    .footer-right {
-      display: flex;
-      align-items: center;
-    }
-  
-    .footer-left {
-      align-items: flex-start;
-  
-      .name {
-        font-size: 32px;
-        margin: 0;
-      }
-  
-      .impressum-link {
-        font-size: 16px;
-        color: white;
-        text-decoration: none;
-        margin-top: 20px;
-  
-        &:hover {
-          color: #70E61C;
-        }
-      }
-    }
-  
-    .footer-center {
-      p {
-        margin: 0;
-        font-size: 18px;
-      }
-    }
-  
-    .footer-right {
-      display: flex;
-      gap: 15px; /* Abstand zwischen den Icons */
-  
-      .footer-icon {
-        width: 24px; /* Größe der Icons */
-        height: 24px;
-        transition: transform 0.3s ease;
-  
-        &:hover {
-          transform: scale(1.6); /* Vergrößerung beim Hover */
-        }
-      }
-    }
+.footer-left,
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px; /* Abstand für kleine Bildschirme */
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-left {
+  align-items: flex-start;
+}
+
+.footer-left .name {
+  font-size: 32px;
+  margin: 0;
+}
+
+.footer-left .impressum-link {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.footer-left .impressum-link:hover {
+  color: #70E61C;
+}
+
+.footer-center p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.footer-right .footer-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer-right .footer-icon:hover {
+  transform: scale(1.6);
+}
+
+/* Media Queries für verschiedene Bildschirmgrößen */
+@media screen and (max-width: 700px) {
+  .footer-left .name {
+    font-size: 26px; /* Verkleinert die Schriftgröße */
   }
-  
+
+  .footer-left .impressum-link {
+    font-size: 14px; /* Verkleinert die Schriftgröße */
+  }
+
+  .footer-center p {
+    font-size: 16px; /* Verkleinert die Schriftgröße */
+  }
+
+  .footer-right {
+    gap: 10px; /* Reduziert den Abstand zwischen den Icons */
+  }
+
+  .footer-right .footer-icon {
+    width: 20px; /* Verkleinert die Icons */
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .footer {
+    flex-direction: column;
+  }
+  .footer-left .name {
+    font-size: 22px !important; /* Noch kleinere Schriftgröße für sehr kleine Bildschirme */
+  }
+
+  .name {
+    display: none;
+  }
+
+  .footer-left .impressum-link {
+    font-size: 22px;
+  }
+
+  .footer-center p {
+    font-size: 18px;
+  }
+
+  .footer-right {
+    gap: 8px; /* Weiter reduzierter Abstand zwischen den Icons */
+  }
+
+  .footer-right .footer-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
