@@ -1,0 +1,222 @@
+html, body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me {
+  padding: 20px;
+  background-color: #1e2a38;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  max-width: 1440px;
+  width: 100%;
+  /* Verhindert Overflow innerhalb dieses Containers */
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 566px;
+  height: 40px;
+  margin-left: 100px;
+
+  .vector {
+    width: 100px;
+    height: auto;
+  }
+
+  .icons {
+    display: flex;
+    gap: 32px;
+
+    a img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.6);
+      }
+    }
+  }
+
+  .email a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27.6px;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.about-me-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  background-image: url('../../assets/backgrounds/purple1.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.text-section {
+  width: 471px;
+  height: 532px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    text-align: left;
+  }
+
+  .about-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 48px;
+        height: 48px;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.6);
+        }
+      }
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Passe den Abstand nach Bedarf an */
+}
+
+.simple-profile-image {
+  width: 100%; /* Passe die Breite an */
+  height: auto; /* Proportionale Höhe */
+  border: none; /* Entfernt alle Ränder */
+  object-fit: cover; /* Bild an den Container anpassen */
+}
+
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    /* Positioniert die Linie direkt am rechten Rand des Bildes */
+    width: 300px;
+    /* Feste Breite für die Linie */
+    height: 4px;
+    /* Höhe der Linie */
+    background-color: #70E61C;
+    /* Farbe der Linie */
+    transform: translateY(-50%);
+    /* Zentriert die Linie vertikal */
+    /* Kein overflow:hidden, da die Linie innerhalb der .image-section bleiben sollte */
+  }
+
+
+@media (max-width: 1270px) {
+  .image-section {   
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .image-section {   
+    display: none;
+  }
+
+  .about-me-container {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 100px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .contact-info {
+    margin-left: 26px;
+    gap: 20px;
+  }
+
+  .email a {
+   display: none;
+  }
+
+  .icons {
+    gap: 20px !important;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .contact-info {
+    margin-bottom: 50px;
+  }
+  h1 {
+    font-size: 40px !important;
+  }
+
+  .about-me-container {
+   height: auto;
+  }
+
+  .about-text {
+    font-size: 16px !important;
+  }
+
+  
+}
+

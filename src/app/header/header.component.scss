@@ -1,0 +1,76 @@
+h1 {
+    color: white;
+    font-size: 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    padding-left: 100px;
+}
+
+.header {
+    position: fixed; /* Macht den Header fixiert */
+    top: 0; /* Fixiert den Header am oberen Rand */
+    left: 0;
+    width: 100vw; /* Stellt sicher, dass der Header die gesamte Breite einnimmt */
+    background-color: #141D2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 109.03px; /* Die Höhe des Headers */
+    z-index: 1000; /* Stellt sicher, dass der Header über anderen Inhalten liegt */
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .popup-menu {
+    display: none;
+  }
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding-right: 100px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 23px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 400;
+        margin: 0 10px;
+
+        &:hover {
+            color: #70E61C;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    h1 {
+        padding-left: 30px;
+    }
+
+    .header-menu {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+}

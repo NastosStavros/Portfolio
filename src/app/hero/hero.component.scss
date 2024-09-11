@@ -1,0 +1,107 @@
+.hero-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  max-width: 1480px;
+  width: 100%;
+  background-color: #141D2F;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Verhindert das Überlappen von Inhalten außerhalb des Containers */
+  height: 50vh;
+}
+
+.hero-img {
+  width: 646px;
+  height: 705px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-color: black;
+  border-radius: 0 0 100px 100px; /* Rundet die unteren Ecken des Bildes */
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-text {
+  font-size: 88px;
+  transform: rotate(270deg); /* Dreht den Text um 90 Grad im Uhrzeigersinn */
+  transform-origin: left top; /* Punkt, um den die Drehung erfolgt */
+  color: white;
+  margin-top: 220px;
+  margin-right: -55px;
+  font-weight: 400;
+}
+
+.hero-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 65px;
+}
+
+.hero-text h1 {
+  font-size: 90px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  margin-top: 18px;
+}
+
+.hero-text h3 {
+  font-size: 50px;
+  font-weight: 400;
+  color: #9747FF;
+}
+
+.hero-button {
+  margin-top: 20px; /* Abstand zwischen Text und Button */
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  background-color: #1e2a38;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #70E61C;
+}
+
+.hero-button:hover {
+  background-color: #9747FF;
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 60px !important; /* Wichtigkeit erzwingen */
+    margin-bottom: 40px;
+  }
+  
+  .hero-text h3 {
+    font-size: 40px !important; /* Anpassung für kleinere Schriftgröße */
+  }
+
+  .vertical-text {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 40px !important; /* Wichtigkeit erzwingen */
+    margin-bottom: 20px;
+  }
+  
+  .hero-text h3 {
+    font-size: 30px !important; /* Anpassung für kleinere Schriftgröße */
+  }
+}

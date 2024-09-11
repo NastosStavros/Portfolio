@@ -1,0 +1,293 @@
+body {
+    background-color: #1e2a38;
+}   
+
+.portfolio-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolio {
+    width: 100%;
+    max-width: 1480px;
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: center;
+    /* Zentriert den Inhalt horizontal */
+    align-items: center;
+    /* Zentriert den Inhalt vertikal */
+    padding-top: 100px;
+    /* Abstand oben */
+    color: white;
+    /* Textfarbe */
+    font-family: 'Poppins', sans-serif;
+    /* Schriftart */
+    font-size: 90px !important;
+    /* Schriftgröße */
+    font-weight: 700;
+    /* Schriftstärke */
+    line-height: 108px;
+    /* Zeilenhöhe */
+    text-align: center;
+    /* Zentriert den Text innerhalb des Containers */
+    gap: 32px;
+    padding-left: 30%;
+    background-color: #1e2a38;
+
+    h1 {
+        font-size: 60px;
+        margin-bottom: 0;
+        background-color: #1e2a38;
+    }
+}
+
+.vector2 {
+    width: 61%;
+    height: 4px;
+}
+
+.portfolio-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: #1e2a38;
+    padding-bottom: 50px;
+    padding-top: 10px;
+
+    p {
+        margin-top: 16px;
+    }
+}
+
+.portfolio-container {
+    padding: 0 10%;
+    /* Abstand links und rechts für den gesamten Abschnitt */
+    background-color: #1e2a38;
+    /* Hintergrundfarbe */
+    color: white;
+    /* Textfarbe */
+    background-image: url('../../assets/backgrounds/purple1.png');
+    background-position: left -200px top 100px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
+
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    /* Erhöhter Abstand zwischen Bild und Text */
+    /* Abstand zwischen den Projekten */
+}
+
+.portfolio-image {
+    width: 44%;
+    height: auto;
+    /* Höhe automatisch anpassen */
+    border-radius: 10px;
+    /* Leicht abgerundete Ecken */
+}
+
+.portfolio-text {
+    width: 50%;
+    /* Textbereich nimmt 50% der Breite ein */
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 0;
+}
+
+.portfolio-text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #9747FF;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.margin-zero {
+    margin-right: 0 !important;
+}
+
+
+.portfolio-button {
+    width: 152px;
+    /* Feste Breite */
+    height: 58px;
+    /* Feste Höhe */
+    padding: 15px 30px;
+    /* Abstand innen (oben/unten: 15px, links/rechts: 30px) */
+    gap: 10px;
+    /* Abstand zwischen den inneren Elementen */
+    border-radius: 10px;
+    /* Abgerundete Ecken nur oben links */
+    color: white;
+    /* Textfarbe */
+
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    /* Ermöglicht die Nutzung von gap */
+    align-items: center;
+    /* Zentriert den Inhalt vertikal */
+    justify-content: center;
+    /* Zentriert den Inhalt horizontal */
+
+    margin-right: 50px;
+}
+
+.portfolio-buttons {
+    margin-right: 100px;
+}
+
+.tools-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27.6px;
+    text-align: left;
+    color: #70E61C;
+}
+
+.portfolio-text-2 {
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    color: white;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: #9747FF;
+            font-weight: 700;
+            margin-top: 0;
+        }
+}
+
+.text-2-buttons {
+    display: flex;
+    justify-content: flex-end;
+    /* Ausrichtung der Buttons am rechten Rand */
+    gap: 10px;
+    /* Abstand zwischen den Buttons */
+}
+
+.project-tools {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 27.6px;
+    text-align: left;
+    color: #70E61C;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.live-test {
+    border: none;
+    /* Kein Rand */
+    background-color: #9747FF;
+
+    &:hover {
+        background-color: #70E61C;
+    }
+}
+
+.github {
+    background-color: #1e2a38;
+    color: white;
+    border: solid 1px #70E61C;
+
+    &:hover {
+        background-color: #70E61C;
+    }
+}
+
+@media (max-width: 1200px) {
+    .portfolio-header {
+        padding-left: 400px;
+    }
+    .vector1 {
+        display: none;
+    }
+}
+
+@media (max-width: 1128px) {
+    .portfolio-item {
+        gap: 0px;
+    }
+
+    .portfolio-button {
+        width: 80px;
+        padding: 0;
+        
+    }
+}
+
+@media (max-width: 940px) {
+    .portfolio-header {
+        padding-top: 0px;
+        padding-left: 310px;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+        align-items: center;
+
+        .portfolio-image {
+            width: 100%;
+        }
+    }
+
+    .portfolio-text {
+        width: 100%;
+    }
+
+    .portfolio-text-2 {
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .portfolio-header {
+        padding-left: 0px;
+    }
+
+    .portfolio-description {
+        padding-bottom: 0px;
+
+        p {
+            margin-block-end: 0;
+        }
+    }
+    .vector2 {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .portfolio-header {
+        padding-top: 100px;
+    }
+}
+

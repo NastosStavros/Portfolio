@@ -1,0 +1,59 @@
+<div id="contact" class="contact-container">
+    <div class="contact">
+        <div class="contact-header">
+            <img class="vector" src="../../assets/vectors/vector_1.png" alt="vector">
+            <h1>Contact</h1>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Got a problem to solve?</h2>
+                <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
+                    contributing to your projects with my work.</p>
+                <p>Need a Frontend developer? <strong>Contact me!</strong></p>
+            </div>
+            <form class="example-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <!-- Neues Eingabefeld für den Namen -->
+                <mat-form-field class="example-full-width">
+                    <mat-label>Name</mat-label>
+                    <input type="text" matInput formControlName="name" placeholder="Ex. John Doe">
+                    <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
+                        Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!-- Bereits existierendes Eingabefeld für die E-Mail -->
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput formControlName="email" [errorStateMatcher]="matcher"
+                        placeholder="Ex. pat@example.com">
+                    <mat-hint>Please enter a valid email address</mat-hint>
+                    <mat-error
+                        *ngIf="contactForm.get('email')?.hasError('email') && !contactForm.get('email')?.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Send me a message</mat-label>
+                    <textarea matInput formControlName="message"
+                        placeholder="Ex. Hello, I am interested in ..."></textarea>
+                </mat-form-field>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="customCheckbox" formControlName="terms">
+                    <label for="customCheckbox">
+                        I've read the
+                        <a href="/privacy-policy" target="_blank" class="privacy-link">privacy policy</a>
+                        and agree to the processing of my data as outlined.
+                    </label>
+                </div>
+                <!-- Submit-Button -->
+                <button type="submit" [disabled]="!contactForm.valid || !contactForm.get('terms')?.value"
+                    class="submit-button">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

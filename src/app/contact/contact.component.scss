@@ -1,0 +1,246 @@
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.contact {
+    background-color: #1e2a38;
+    /* Hintergrundfarbe des Contact-Abschnitts */
+    color: white;
+    /* Textfarbe */
+    
+    /* Abstand oben und unten, 10% Abstand links und rechts */
+    background-image: url('../../assets/backgrounds/purple2.png');
+    background-position: left -120px bottom -400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 1480px;
+    width: 100%;
+    /* Verhindert Overflow innerhalb dieses Containers */
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    /* Abstand unter dem Header */
+}
+
+.vector {
+    width: 40%;
+    /* Vector geht bis zur Mitte des Containers */
+    height: 4px;
+}
+
+.contact-header h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 57px;
+    font-weight: 700;
+    line-height: 108px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    /* Header-Text über dem Vector */
+}
+
+.contact-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    /* Abstand zwischen Info und Formular */
+    margin-bottom: 100px;
+ 
+}
+
+.contact-info {
+    width: 40%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+        color: white;
+        font-weight: 700;
+        margin-top: 0;
+    }
+
+    p {
+        margin-top: 0;
+        font-size: 16px;
+    }
+}
+
+.example-form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Abstand zwischen den Eingabefeldern */
+    background-color: #1e2a38;
+}
+
+
+/* Hintergrundfarbe des gesamten Formularfeldes */
+.mat-form-field {
+    background-color: #2a3b4c !important;
+    /* Neue Hintergrundfarbe */
+    border-radius: 5px;
+    /* Optionale Abrundung der Ecken */
+}
+
+/* Hintergrundfarbe des inneren Bereichs des Formularfeldes */
+.mat-form-field .mat-form-field-infix {
+    background-color: #2a3b4c !important;
+    /* Gleiche Hintergrundfarbe */
+}
+
+/* Entfernen des Unterstrichs (wenn vorhanden) */
+.mat-form-field .mat-form-field-underline {
+    display: none;
+    /* Entfernt den Unterstrich */
+}
+
+/* Hintergrundfarbe für den Eingabebereich */
+.mat-form-field .mat-input-element {
+    background-color: #2a3b4c;
+    /* Gleiche Hintergrundfarbe für Eingabefeld */
+    color: #FFFFFF;
+    /* Textfarbe im Eingabefeld */
+}
+
+/* styles.scss oder die SCSS-Datei deiner Komponente */
+
+/* Container für die benutzerdefinierte Checkbox */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: white;
+    /* Textfarbe */
+}
+
+/* Verstecke das standardmäßige Checkbox-Häkchen */
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Erstelle das benutzerdefinierte Checkbox-Kästchen */
+.custom-checkbox input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+/* Stil für das Kästchen */
+.custom-checkbox input[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    /* Kästchenfarbe */
+    border-radius: 4px;
+    border: 2px solid #555;
+    /* Rahmenfarbe */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Stil für das markierte Kästchen */
+.custom-checkbox input[type="checkbox"]:checked+label::before {
+    background-color: #1e2a38;
+    /* Hintergrundfarbe wenn markiert */
+    border-color: #1e2a38;
+    /* Rahmenfarbe wenn markiert */
+}
+
+/* Häkchen anzeigen, wenn das Kästchen ausgewählt ist */
+.custom-checkbox input[type="checkbox"]:checked+label::after {
+    content: "\2714";
+    /* Unicode für das Häkchen */
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    color: white;
+    /* Häkchenfarbe */
+    font-size: 16px;
+}
+
+/* styles.scss oder die SCSS-Datei deiner Komponente */
+
+/* Stil für den Link innerhalb der Checkbox */
+.custom-checkbox .privacy-link {
+    color: #8f9eaf;
+    /* Farbe des Links */
+    text-decoration: underline;
+    /* Unterstreichung für den Link */
+}
+
+.custom-checkbox .privacy-link:hover {
+    color: #70E61C;
+    /* Farbe des Links beim Hover-Effekt */
+}
+
+.submit-button {
+    width: 253px;
+    height: 58px;
+    gap: 0px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px, 30px, 15px, 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+
+    /* Deaktivierter Zustand */
+    background-color: lightgray;
+    color: white;
+    opacity: 0.5;
+    pointer-events: none;
+    /* Deaktiviert den Button für Benutzerinteraktionen */
+
+    /* Aktivierter Zustand */
+    &:enabled {
+        background-color: #9747FF;
+        color: white;
+        opacity: 1;
+        pointer-events: auto;
+        /* Aktiviert den Button für Benutzerinteraktionen */
+    }
+
+    /* Hover-Effekt im aktivierten Zustand */
+    &:enabled:hover {
+        background-color: #70E61C;
+        transform: scale(1.05);
+        /* Vergrößert den Button leicht */
+    }
+}
+
+@media (max-width: 645px) {
+    .contact-content {
+        flex-direction: column; /* Ändert die Ausrichtung auf Spaltenrichtung */
+        align-items: center; /* Zentriert den Inhalt */
+    }
+
+    .contact-info {
+        width: 100%; /* Breite der Textsektion auf 100% setzen */
+        text-align: center; /* Text zentrieren */
+        margin-bottom: 20px; /* Abstand unter dem Text */
+    }
+
+    .example-form {
+        width: 90%; /* Breite des Formulars auf 100% setzen */
+    }
+}

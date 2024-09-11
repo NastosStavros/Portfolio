@@ -1,0 +1,262 @@
+.my-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-container {
+  display: flex;
+  gap: 50px;
+  /* Abstand zwischen linker und rechter Sektion */
+  padding: 20px;
+  background-color: #1e2a38;
+  /* Gemeinsame Hintergrundfarbe für beide Sektionen */
+  color: white;
+  /* Textfarbe */
+  background-image: url('../../assets/backgrounds/green1.png');
+  background-position: right -140px top 30px;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.skills {
+  flex: 1;
+  /* Die linke Sektion nimmt ihren Anteil des verfügbaren Platzes ein */
+  padding-left: 100px;
+}
+
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* Abstand zwischen den Icons */
+  width: 615px;
+  /* Feste Breite */
+  height: 404px;
+  /* Feste Höhe */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 88px;
+  /* Feste Breite */
+  height: 101px;
+  /* Feste Höhe */
+  padding: 12px 0px 0px 0px;
+  /* Abstand oben */
+  position: relative;
+  /* Für die Positionierung von :hover-Effekten */
+}
+
+.skill-icon {
+  width: 54px;
+  /* Größe des Icons */
+  height: 60px;
+  /* Höhe des Icons */
+  transition: transform 0.3s;
+  transform-origin: center center;
+  /* Zentriert die Transformation */
+}
+
+.skill-item:hover .skill-icon {
+  transform: translateY(-10px);
+  /* Verschiebt das Icon um 10px nach oben */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Fügt einen leichten Schlagschatten hinzu */
+}
+
+.skill-name {
+  margin-top: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.skills-section-right {
+  flex: 1;
+  /* Die rechte Sektion nimmt den restlichen verfügbaren Platz ein */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* Richtet die Inhalte am rechten Rand aus */
+  padding-right: 100px;
+  /* Abstand vom rechten Rand */
+  position: relative;
+  /* Für die Positionierung des Vektors */
+  text-align: end;
+}
+
+.header-with-vector {
+  display: flex;
+  align-items: center;
+  /* Vertikal zentriert das h1 und den Vektor */
+  position: relative;
+  /* Für die absolute Positionierung des Vektors */
+}
+
+.skills-section-right h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.skills-section-right .description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0px;
+  margin-top: 16px;
+}
+
+.skills-section-right h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.skills-section-right .highlight {
+  color: #9747FF;
+  /* Farbe für "another skill" */
+}
+
+.skills-section-right .contact-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.get-in-touch {
+  background-color: #70E61C;
+  /* Hintergrundfarbe des Buttons */
+  color: white;
+  /* Textfarbe */
+  border: none;
+  padding: 15px 30px;
+  /* Abstand innen, oben/unten: 15px, links/rechts: 30px */
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  width: auto;
+  /* Die Breite passt sich dem Inhalt an (Hug) */
+  height: auto;
+  /* Die Höhe passt sich dem Inhalt an (Hug) */
+  gap: 10px;
+  /* Abstand zwischen den inneren Elementen (z.B. Text und Symbol) */
+  display: inline-flex;
+  /* Ermöglicht die Verwendung von gap bei inline-Elementen */
+  align-items: center;
+  /* Zentriert den Text vertikal */
+}
+
+.get-in-touch:hover {
+  background-color: #9747FF;
+  /* Dunklerer Grünton für den Hover-Zustand */
+}
+
+.vector-icon {
+  position: absolute;
+  /* Absolute Positionierung für den Vektor */
+  right: -50px;
+  /* Positioniert den Vektor außerhalb des Containers, am rechten Rand des Bildschirms */
+  top: 33%;
+  /* Setzt den oberen Rand des Vektors auf 50% der Höhe des Containers */
+  transform: translateY(-50%) translateX(100%);
+  /* Verschiebt den Vektor nach oben um die Hälfte seiner eigenen Höhe und nach rechts außerhalb des Containers */
+  width: 105px;
+  height: 4px;
+  /* Höhe automatisch anpassen */
+  overflow-y: hidden;
+  margin-right: 36px;
+}
+
+.skill-item {
+  position: relative;
+  /* Notwendig, damit das Bild absolut positioniert werden kann */
+}
+
+.image-on-hover {
+  position: absolute;
+  top: -120px;
+  /* Passe die Position nach Bedarf an */
+  left: 100%;
+  transform: translateX(-50%);
+  display: none;
+  /* Anfangs versteckt */
+  width: 150px;
+  /* Größe des angezeigten Bildes */
+  height: auto;
+}
+
+.skill-item:hover .image-on-hover {
+  display: block;
+  /* Bild anzeigen, wenn über das Icon gehovt wird */
+}
+
+@media (max-width: 1200px) {
+  .skills-section {
+    width: 445px;
+  }
+}
+
+@media (max-width: 940px) {
+  .skills-container {
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    flex-direction: column-reverse;
+    background-position: bottom -40px right -200px;
+  }
+
+  .skills-section {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-section-right {
+    padding-right: 50px;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .vector-icon {
+    display: none;
+  }
+
+  .skills {
+    padding-left: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-item {
+    width: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  h1 {
+    font-size: 30px;
+    padding-top: 80px;
+  }
+ 
+  .skills {
+    padding-left: 10px;
+  }
+
+
+}
+
