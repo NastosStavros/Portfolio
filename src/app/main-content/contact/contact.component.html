@@ -44,7 +44,7 @@
                     <input type="checkbox" id="customCheckbox" formControlName="terms">
                     <label for="customCheckbox">
                         I've read the
-                        <a href="/privacy-policy" target="_blank" class="privacy-link">privacy policy</a>
+                        <a [routerLink]="['privacy']" routerLinkActive="router-link-active" target="_blank" class="privacy-link">privacy policy</a>
                         and agree to the processing of my data as outlined.
                     </label>
                 </div>
