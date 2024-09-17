@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 import {
   FormBuilder,
@@ -28,6 +29,8 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  http = inject(HttpClient);
+
   contactForm: FormGroup;
   matcher = new ErrorStateMatcher();
 

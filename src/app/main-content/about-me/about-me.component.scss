@@ -28,39 +28,39 @@ html, body {
   width: 566px;
   height: 40px;
   margin-left: 100px;
+}
 
-  .vector {
-    width: 100px;
-    height: auto;
-  }
+.vector {
+  width: 100px;
+  height: auto;
+}
 
-  .icons {
-    display: flex;
-    gap: 32px;
+.icons {
+  display: flex;
+  gap: 32px;
+}
 
-    a img {
-      width: 30px;
-      height: 30px;
-      transition: transform 0.3s;
+.icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
 
-      &:hover {
-        transform: scale(1.6);
-      }
-    }
-  }
+.icons a img:hover {
+  transform: scale(1.6);
+}
 
-  .email a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 27.6px;
-    color: white;
-    text-decoration: none;
+.email a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+  color: white;
+  text-decoration: none;
+}
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.email a:hover {
+  text-decoration: underline;
 }
 
 .about-me-container {
@@ -78,97 +78,93 @@ html, body {
   background-size: contain;
 }
 
-
 .text-section {
   width: 471px;
   height: 532px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
 
-  h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    margin: 40px 0 20px;
-    text-align: left;
-  }
+.text-section h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  text-align: left;
+}
 
-  .about-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 30px;
-    text-align: left;
-  }
+.about-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 30px;
+  text-align: left;
+}
 
-  .info-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .info-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-      img {
-        width: 48px;
-        height: 48px;
-        transition: transform 0.3s;
+.info-item img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s;
+}
 
-        &:hover {
-          transform: scale(1.6);
-        }
-      }
+.info-item img:hover {
+  transform: scale(1.6);
+}
 
-      p {
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        margin: 0;
-      }
-    }
-  }
+.info-item p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
 }
 
 .image-section {
+  width: 350px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; /* Passe den Abstand nach Bedarf an */
+  padding-right: 200px;
+  margin-top: 85px;
 }
 
 .simple-profile-image {
-  width: 100%; /* Passe die Breite an */
-  height: auto; /* Proportionale Höhe */
+  width: 130%; /* Passe die Breite an */
+  height: 110%; /* Proportionale Höhe */
   border: none; /* Entfernt alle Ränder */
+  border-radius: 100px;
   object-fit: cover; /* Bild an den Container anpassen */
 }
 
-  .line {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    /* Positioniert die Linie direkt am rechten Rand des Bildes */
-    width: 300px;
-    /* Feste Breite für die Linie */
-    height: 4px;
-    /* Höhe der Linie */
-    background-color: #70E61C;
-    /* Farbe der Linie */
-    transform: translateY(-50%);
-    /* Zentriert die Linie vertikal */
-    /* Kein overflow:hidden, da die Linie innerhalb der .image-section bleiben sollte */
-  }
-
-
-@media (max-width: 1270px) {
-  .image-section {   
-    width: 350px;
-    height: 350px;
-  }
+.line {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  /* Positioniert die Linie direkt am rechten Rand des Bildes */
+  width: 300px;
+  /* Feste Breite für die Linie */
+  height: 4px;
+  /* Höhe der Linie */
+  background-color: #70E61C;
+  /* Farbe der Linie */
+  transform: translateY(-50%);
+  /* Zentriert die Linie vertikal */
+  /* Kein overflow:hidden, da die Linie innerhalb der .image-section bleiben sollte */
 }
+
 
 @media (max-width: 1060px) {
   .image-section {   
@@ -182,7 +178,6 @@ html, body {
   }
 }
 
-
 @media (max-width: 600px) {
   .contact-info {
     margin-left: 26px;
@@ -190,7 +185,7 @@ html, body {
   }
 
   .email a {
-   display: none;
+    display: none;
   }
 
   .icons {
@@ -201,22 +196,19 @@ html, body {
 }
 
 @media (max-width: 400px) {
-
   .contact-info {
     margin-bottom: 50px;
   }
+  
   h1 {
     font-size: 40px !important;
   }
 
   .about-me-container {
-   height: auto;
+    height: auto;
   }
 
   .about-text {
     font-size: 16px !important;
   }
-
-  
 }
-
