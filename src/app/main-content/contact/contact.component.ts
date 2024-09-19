@@ -34,6 +34,16 @@ export class ContactComponent {
   contactForm: FormGroup;
   matcher = new ErrorStateMatcher();
 
+  post = {
+    endPoint: 'https://stavros-nastos.com/sendMail.php', // Dein PHP-Skript
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    },
+  };
+
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -47,7 +57,19 @@ export class ContactComponent {
     return this.contactForm.valid;
   }
   onSubmit() {
-    console.log(this.contactForm.value);
+    if (this.contactForm.valid) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactForm.value), this.post.options)
+        .subscribe({
+          next: (response) => {
+            console.log('E-Mail erfolgreich gesendet:', response);
+            this.contactForm.reset(); // Reset the form after submission
+          },
+          error: (error) => {
+            console.error('Fehler beim Senden der E-Mail:', error);
+          }
+        });
+    }
   }
 }
+
 
