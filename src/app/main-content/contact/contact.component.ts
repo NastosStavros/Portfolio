@@ -35,7 +35,7 @@ export class ContactComponent {
   matcher = new ErrorStateMatcher();
 
   post = {
-    endPoint: 'https://stavros-nastos.com/sendMail.php', // Dein PHP-Skript
+    endPoint: 'http://stavros-nastos.com/sendMail.php', // Dein PHP-Skript
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
