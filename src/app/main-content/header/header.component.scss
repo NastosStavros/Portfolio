@@ -28,7 +28,7 @@ h1 {
   
   /* Popup-Menü */
   .popup-menu {
-    position: absolute; /* Position relativ zum übergeordneten Element */
+    position: fixed; /* Position relativ zum übergeordneten Element */
     top: 109px; /* Direkt unter dem Header */
     right: 0; /* Am rechten Rand des Bildschirms */
     width: 200px; /* Breite des Popup-Menüs */
