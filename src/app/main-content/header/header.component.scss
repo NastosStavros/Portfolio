@@ -1,76 +1,119 @@
+/* Styling für das h1-Element (Name im Header) */
 h1 {
     color: white;
     font-size: 32px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
     padding-left: 100px;
-}
-
-.header {
-    position: fixed; /* Macht den Header fixiert */
-    top: 0; /* Fixiert den Header am oberen Rand */
+  }
+  
+  /* Header-Styling */
+  .header {
+    position: fixed; /* Fixiert den Header am oberen Bildschirmrand */
+    top: 0;
     left: 0;
-    width: 100vw; /* Stellt sicher, dass der Header die gesamte Breite einnimmt */
-    background-color: #141D2F;
+    width: 100vw; /* Volle Breite */
+    background-color: #141D2F; /* Hintergrundfarbe */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 109.03px; /* Die Höhe des Headers */
+    height: 109.03px; /* Höhe des Headers */
     z-index: 1000; /* Stellt sicher, dass der Header über anderen Inhalten liegt */
   }
-
+  
+  /* Menü-Button-Styling (Burger-Menü für kleine Bildschirme) */
   .menu-toggle {
-    display: none;
+    display: none; /* Versteckt den Button auf großen Bildschirmen */
   }
-
+  
+  /* Popup-Menü */
   .popup-menu {
-    display: none;
+    position: absolute; /* Position relativ zum übergeordneten Element */
+    top: 109px; /* Direkt unter dem Header */
+    right: 0; /* Am rechten Rand des Bildschirms */
+    width: 200px; /* Breite des Popup-Menüs */
+    background-color: #141D2F; /* Hintergrundfarbe */
+    padding: 20px; /* Innenabstand */
+    z-index: 9999; /* Höherer z-index, damit es über anderen Elementen liegt */
+    transition: opacity 0.3s ease; /* Weicher Übergang für das Einblenden */
   }
-
-.header-menu {
+  
+  /* Klasse für sichtbares Popup-Menü */
+  .popup-menu.show {
+    opacity: 1; /* Volle Sichtbarkeit */
+    pointer-events: auto; /* Klicks aktivieren */
+  }
+  
+  
+  /* Links im Popup-Menü */
+  .popup-menu-content a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Links in Blöcke, damit sie untereinander stehen */
+    margin-bottom: 10px; /* Abstand zwischen den Links */
+    z-index: 9999; /* Höherer z-index, damit es über anderen Elementen liegt */
+  }
+  
+  .popup-menu-content a:hover {
+    color: #70E61C; /* Hover-Farbe */
+  }
+  
+  /* Schließen-Button im Popup-Menü */
+  .popup-menu-content .close-menu {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  /* Header-Menü für größere Bildschirme */
+  .header-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
-    padding-right: 100px;
-
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 23px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-weight: 400;
-        margin: 0 10px;
-
-        &:hover {
-            color: #70E61C;
-        }
-    }
-}
-
-@media screen and (max-width: 700px) {
-
+    width: 300px; /* Breite des Menüs */
+    padding-right: 100px; /* Abstand vom rechten Rand */
+  }
+  
+  .header-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    margin: 0 10px; /* Abstand zwischen den Links */
+  }
+  
+  .header-menu a:hover {
+    color: #70E61C; /* Hover-Farbe für Menü-Links */
+  }
+  
+  /* Responsive Design: Anpassung für kleinere Bildschirme */
+  @media screen and (max-width: 700px) {
     h1 {
-        padding-left: 30px;
+      padding-left: 30px; /* Weniger Padding für kleinere Bildschirme */
     }
-
+  
     .header-menu {
-        padding-right: 30px;
+      padding-right: 30px; /* Weniger Padding für kleinere Bildschirme */
     }
-}
-
-@media screen and (max-width: 560px) {
+  }
+  
+  @media screen and (max-width: 560px) {
     .header-menu {
-        display: none;
+      display: none; /* Header-Menü verstecken bei kleinen Bildschirmen */
     }
-
+  
     .menu-toggle {
-        display: block;
-        background-color: transparent;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        margin-right: 30px;
+      display: block; /* Burger-Menü anzeigen */
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 24px; /* Größe des Burger-Menüsymbols */
+      cursor: pointer;
+      margin-right: 30px; /* Abstand zum rechten Rand */
     }
-}
+  }
+  
