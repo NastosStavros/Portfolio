@@ -39,7 +39,7 @@ export class ContactComponent {
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain',
       },
     },
   };
