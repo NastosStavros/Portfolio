@@ -19,7 +19,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $message = $params->message;
 
         // Prepare the email
-        $recipient = 's_nastos@icloud.com';  
+        $recipient = 'n.stavros@outlook.de';  
         $subject = "Contact From <$email>";
         $message = "From: " . $name . "<br>" . $message ;
 
