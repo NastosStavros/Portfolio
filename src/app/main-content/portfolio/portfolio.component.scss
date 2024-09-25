@@ -218,6 +218,15 @@ body {
     }
 }
 
+@media (max-width: 1400px) {
+    .portfolio-button {
+        width: 80px;
+        padding: 0;
+        
+    }
+}
+
+
 @media (max-width: 1200px) {
     .portfolio-header {
         padding-left: 400px;
@@ -230,12 +239,6 @@ body {
 @media (max-width: 1128px) {
     .portfolio-item {
         gap: 0px;
-    }
-
-    .portfolio-button {
-        width: 80px;
-        padding: 0;
-        
     }
 }
 
