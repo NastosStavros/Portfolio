@@ -166,17 +166,37 @@ html, body {
 }
 
 
-@media (max-width: 1060px) {
+@media (max-width: 900px) {
+
+  
   .image-section {   
-    display: none;
+    display: block; /* Bild unter dem Text anzeigen */
+    margin-top: 20px; /* Abstand zwischen Text und Bild */
+    width: 100%; /* Breite anpassen */
+    padding-right: 0; /* Kein Padding auf der rechten Seite */
+    text-align: center; /* Bild zentrieren */
+  }
+
+  .simple-profile-image {
+    width: 80%; /* Breite des Bildes verringern */
+    height: auto; /* Höhe automatisch anpassen */
+    max-width: 250px; /* Maximalbreite einstellen */
   }
 
   .about-me-container {
+    flex-direction: column; /* Elemente untereinander anordnen */
     justify-content: center;
     margin-left: 0;
     margin-top: 100px;
   }
+
+  .text-section {
+    width: 100%; /* Breite anpassen */
+    text-align: center; /* Text zentrieren */
+    margin-bottom: 40px; /* Abstand zwischen Text und Bild */
+  }
 }
+
 
 @media (max-width: 600px) {
   .contact-info {
@@ -210,5 +230,9 @@ html, body {
 
   .about-text {
     font-size: 16px !important;
+  }
+
+  .image-section {
+    padding-top: 120px;
   }
 }

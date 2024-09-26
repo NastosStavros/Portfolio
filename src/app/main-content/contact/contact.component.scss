@@ -244,3 +244,9 @@
         width: 90%; /* Breite des Formulars auf 100% setzen */
     }
 }
+
+@media screen and (max-width: 450px) {
+    .vector {
+        width: 24%;
+    }
+}
