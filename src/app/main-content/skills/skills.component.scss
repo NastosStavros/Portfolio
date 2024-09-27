@@ -225,10 +225,13 @@
 
 @media (max-width: 500px) {
   .skills-section-right {
-    padding-right: 50px;
+    padding-right: 0;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
 
     h1 {
-      font-size: 40px;
+      font-size: 50px;
     }
   }
 
