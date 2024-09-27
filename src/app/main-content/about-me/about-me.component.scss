@@ -188,6 +188,7 @@ html, body {
     justify-content: center;
     margin-left: 0;
     margin-top: 100px;
+    background-image: none;
   }
 
   .text-section {
@@ -226,13 +227,31 @@ html, body {
 
   .about-me-container {
     height: auto;
+    
+  }
+
+  .about-me {
+    padding-top: 130px;
   }
 
   .about-text {
-    font-size: 16px !important;
+    font-size: 15px !important;
+  }
+
+  .info-item {
+    gap: 5px;
+  }
+
+  .info-item p {
+    font-size: 15px;
+  }
+
+  .info-item img {
+    width: 35px;
+    height: 35px;
   }
 
   .image-section {
-    padding-top: 120px;
+    padding-top: 150px;
   }
 }

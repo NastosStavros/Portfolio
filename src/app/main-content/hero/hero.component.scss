@@ -13,8 +13,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden; /* Verhindert das Überlappen von Inhalten außerhalb des Containers */
-  height: 50vh;
-
+  height: 100vh;
   /* Hintergrundbilder einfügen */
   background-image: url('../../../assets/backgrounds/purple1.png'), url('../../../assets/backgrounds/green1.png');
   background-position: left, right; /* Positioniert die Bilder links und rechts */
@@ -87,6 +86,20 @@
   background-color: #9747FF;
 }
 
+.icons {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.vector {
+  width: 200px;
+  height: 4px;
+}
+
 @media (max-width: 768px) {
   .hero-text h1 {
     font-size: 60px !important; /* Wichtigkeit erzwingen */
@@ -100,6 +113,14 @@
   .vertical-text {
     display: none;
   }
+
+  .vector {
+    display: none;
+  }
+
+  .icons {
+    left: 70px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -110,5 +131,9 @@
   
   .hero-text h3 {
     font-size: 30px !important; /* Anpassung für kleinere Schriftgröße */
+  }
+
+  .icons {
+    bottom: 50px;
   }
 }

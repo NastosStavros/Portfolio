@@ -35,7 +35,7 @@ export class ContactComponent {
   matcher = new ErrorStateMatcher();
 
   post = {
-    endPoint: 'https://stavros-nastos.com/.php', // Dein PHP-Skript
+    endPoint: 'https://stavros-nastos.com/sendMail.php', // Dein PHP-Skript
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -46,11 +46,11 @@ export class ContactComponent {
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(3)]],  // Hier müssen die Validatoren in ein Array gesetzt werden
       email: ['', [Validators.required, Validators.email]],
-      message: [''],
+      message: ['', [Validators.required, Validators.minLength(10)]],
       terms: [false, Validators.requiredTrue]
-    });
+    });    
   }
 
   get isFormValid() {

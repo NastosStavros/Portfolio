@@ -17,20 +17,32 @@ export class HeaderComponent {
     this.isMenuVisible = !this.isMenuVisible;
   }
 
-  scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerOffset = 100; // Anpassung des Offsets, um das Überscrollen zu verhindern
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+ 
+private headerOffsets: { [key: string]: number } = {
+  'about-me': 80,
+  'skills': 100,
+  'portfolio': 30
+};
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-
-      // Menü schließen, wenn eine Navigation erfolgt
-      this.isMenuVisible = false;
-    }
+// Ändern Sie die scrollToSection-Funktion, um die headerOffset aus dem Objekt zu verwenden
+scrollToSection(sectionId: string, event?: Event) {
+  if (event) {
+    event.preventDefault(); // Verhindert das Standard-Verhalten des Links
   }
+  
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const headerOffset = this.headerOffsets[sectionId] || 100; // Verwenden Sie die headerOffset aus dem Objekt oder verwenden Sie eine Standardwerte von 100
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+
+    // Menü schließen, wenn eine Navigation erfolgt
+    this.isMenuVisible = false;
+  }
+}
 }
