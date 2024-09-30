@@ -2,19 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background-color: #1e2a38;
+       /* Abstand oben und unten, 10% Abstand links und rechts */
+       background-image: url('../../../assets/backgrounds/purple2.png');
+       background-position: right -300px top 0px;
+       background-repeat: no-repeat;
+       background-size: contain;
 }
 .contact {
-    background-color: #1e2a38;
-    /* Hintergrundfarbe des Contact-Abschnitts */
     color: white;
     /* Textfarbe */
     
-    /* Abstand oben und unten, 10% Abstand links und rechts */
-    background-image: url('../../../assets/backgrounds/purple2.png');
-    background-position: left -120px bottom -400px;
-    background-repeat: no-repeat;
-    background-size: contain;
+ 
     max-width: 1480px;
     width: 100%;
     /* Verhindert Overflow innerhalb dieses Containers */
@@ -82,7 +81,6 @@
     flex-direction: column;
     gap: 20px;
     /* Abstand zwischen den Eingabefeldern */
-    background-color: #1e2a38;
 }
 
 

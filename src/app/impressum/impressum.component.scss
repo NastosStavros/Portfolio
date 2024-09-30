@@ -6,9 +6,11 @@
     height: 100vh;
     background-color: #141D2F;
     color: white;
+    font-size: 18px;
 }
 
 .impressum-button {
+    text-align: center;
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 24px;
@@ -25,3 +27,24 @@
         background-color: #9747FF;
     }
 }
+
+h1 {
+    color: white;
+    font-size: 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Header-Styling */
+  .header {
+    position: fixed; /* Fixiert den Header am oberen Bildschirmrand */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Volle Breite */
+    background-color: #141D2F; /* Hintergrundfarbe */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 109.03px; /* Höhe des Headers */
+    z-index: 1000; /* Stellt sicher, dass der Header über anderen Inhalten liegt */
+  }

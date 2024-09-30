@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #1e2a38;
 }
 
 .skills-container {
@@ -9,14 +10,9 @@
   gap: 50px;
   /* Abstand zwischen linker und rechter Sektion */
   padding: 20px;
-  background-color: #1e2a38;
-  /* Gemeinsame Hintergrundfarbe für beide Sektionen */
   color: white;
   /* Textfarbe */
-  background-image: url('../../../assets/backgrounds/green1.png');
-  background-position: right -140px top 30px;
-  background-repeat: no-repeat;
-  background-size: 400px;
+
   max-width: 1440px;
   width: 100%;
 }
@@ -209,6 +205,10 @@
 }
 
 @media (max-width: 940px) {
+
+  .skills{
+    padding-left: 50px;
+  }
   .skills-container {
     align-items: center;
     gap: 50px;

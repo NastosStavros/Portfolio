@@ -1,12 +1,13 @@
-body {
-    background-color: #1e2a38;
-}   
-
 .portfolio-main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #1e2a38;
+    background-image: url('../../../assets/backgrounds/purple1.png');
+    background-position: left 300px top 262px;
+    background-repeat: no-repeat;
+    background-size: 650px;
 }
 
 .portfolio {
@@ -36,12 +37,10 @@ body {
     /* Zentriert den Text innerhalb des Containers */
     gap: 32px;
     padding-left: 30%;
-    background-color: #1e2a38;
 
     h1 {
         font-size: 60px;
         margin-bottom: 0;
-        background-color: #1e2a38;
         font-family: "Poppins", sans-serif;
         font-size: 60px;
         font-weight: 700;
@@ -59,7 +58,6 @@ body {
     line-height: 28px;
     text-align: center;
     color: white;
-    background-color: #1e2a38;
     padding-bottom: 50px;
     padding-top: 10px;
     padding-left: 40px;
@@ -72,15 +70,9 @@ body {
 
 .portfolio-container {
     padding: 0 10%;
-    /* Abstand links und rechts für den gesamten Abschnitt */
-    background-color: #1e2a38;
-    /* Hintergrundfarbe */
     color: white;
     /* Textfarbe */
-    background-image: url('../../../assets/backgrounds/purple1.png');
-    background-position: left -200px top 100px;
-    background-repeat: no-repeat;
-    background-size: 400px;
+ 
 }
 
 

@@ -1,131 +1,135 @@
-/* Styling für das h1-Element (Name im Header) */
+/* Der äußere Container hat 100vw, um den gesamten Bildschirm abzudecken */
+.header-container {
+  width: 100vw; /* Volle Breite des Bildschirms */
+  background-color: #141D2F; /* Hintergrundfarbe des Headers */
+  display: flex;
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  position: fixed; /* Header bleibt oben fixiert */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Der innere Header-Content ist auf maximal 1440px begrenzt */
+.header {
+  width: 100%;
+  max-width: 1440px; /* Maximale Breite des Header-Inhalts */
+  display: flex;
+  justify-content: space-around; /* Abstand zwischen H1 und Menü */
+  align-items: center;
+  padding: 0 20px; /* Padding auf beiden Seiten für etwas Abstand */
+  height: 109px; /* Höhe des Headers */
+  background-color: inherit; /* Hintergrundfarbe des Containers wird übernommen */
+}
+
 h1 {
-    color: white;
-    font-size: 32px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 700;
-    padding-left: 100px;
-  }
-  
-  /* Header-Styling */
-  .header {
-    position: fixed; /* Fixiert den Header am oberen Bildschirmrand */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Volle Breite */
-    background-color: #141D2F; /* Hintergrundfarbe */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 109.03px; /* Höhe des Headers */
-    z-index: 1000; /* Stellt sicher, dass der Header über anderen Inhalten liegt */
-  }
-  
-  /* Menü-Button-Styling (Burger-Menü für kleine Bildschirme) */
-  .menu-toggle {
-    display: none; /* Versteckt den Button auf großen Bildschirmen */
-  }
-  
-  /* Popup-Menü */
-  .popup-menu {
-    height: 100vh; /* Volle Bildschirmhoehe */
-    position: fixed; /* Position relativ zum übergeordneten Element */
-    top: 109px; /* Direkt unter dem Header */
-    right: 0; /* Am rechten Rand des Bildschirms */
-    width: 100%; /* Breite des Popup-Menüs */
-    background-color: rgb(20, 29, 47, 0.5); /* Hintergrundfarbe */
-    padding: 20px; /* Innenabstand */
-    z-index: 9999; /* Höherer z-index, damit es über anderen Elementen liegt */
-    transition: opacity 0.3s ease; /* Weicher Übergang für das Einblenden */
-  }
-  
-  /* Klasse für sichtbares Popup-Menü */
-  .popup-menu.show {
-    opacity: 1; /* Volle Sichtbarkeit */
-    pointer-events: auto; /* Klicks aktivieren */
+  color: white;
+  font-size: 32px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+}
+
+/* Menü-Styling */
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Abstand zwischen den Links */
+}
+
+.header-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+}
+
+.header-menu a:hover {
+  color: #70E61C;
+}
+
+/* Menü-Button-Styling (Burger-Menü für kleine Bildschirme) */
+.menu-toggle {
+  display: none; /* Versteckt den Button auf großen Bildschirmen */
+}
+
+/* Popup-Menü */
+.popup-menu {
+  height: 100vh; /* Volle Bildschirmhöhe */
+  position: fixed; /* Position relativ zum übergeordneten Element */
+  top: 109px; /* Direkt unter dem Header */
+  right: 0; /* Am rechten Rand des Bildschirms */
+  width: 100%; /* Breite des Popup-Menüs */
+  background-color: rgba(20, 29, 47, 0.5); /* Hintergrundfarbe */
+  padding: 20px; /* Innenabstand */
+  z-index: 9999; /* Höherer z-index, damit es über anderen Elementen liegt */
+  transition: opacity 0.3s ease; /* Weicher Übergang für das Einblenden */
+}
+
+/* Klasse für sichtbares Popup-Menü */
+.popup-menu.show {
+  opacity: 1; /* Volle Sichtbarkeit */
+  pointer-events: auto; /* Klicks aktivieren */
+}
+
+.popup-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: start;
+}
+
+/* Links im Popup-Menü */
+.popup-menu-content a {
+  color: white;
+  text-decoration: none;
+  z-index: 9999; /* Höherer z-index, damit es über anderen Elementen liegt */
+  padding: 30px;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.popup-menu-content a:hover {
+  color: #70E61C; /* Hover-Farbe */
+}
+
+/* Schließen-Button im Popup-Menü */
+.popup-menu-content .close-menu {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Responsive Design: Anpassung für kleinere Bildschirme */
+@media screen and (max-width: 700px) {
+  h1 {
+    padding-left: 30px; /* Weniger Padding für kleinere Bildschirme */
   }
 
-  .popup-menu-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    justify-content: start;
+  .header-menu {
+    padding-right: 30px; /* Weniger Padding für kleinere Bildschirme */
   }
-  
-  
-  /* Links im Popup-Menü */
-  .popup-menu-content a {
-    color: white;
-    text-decoration: none;
-    z-index: 9999; /* Höherer z-index, damit es über anderen Elementen liegt */
-    padding: 30px;
-    font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 400;
-    transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 560px) {
+  .header-menu {
+    display: none; /* Header-Menü verstecken bei kleinen Bildschirmen */
   }
-  
-  .popup-menu-content a:hover {
-    color: #70E61C; /* Hover-Farbe */
-  }
-  
-  /* Schließen-Button im Popup-Menü */
-  .popup-menu-content .close-menu {
-    background: none;
+
+  .menu-toggle {
+    display: block; /* Burger-Menü anzeigen */
+    background-color: transparent;
     border: none;
     color: white;
+    font-size: 24px; /* Größe des Burger-Menüsymbols */
     cursor: pointer;
-    font-size: 18px;
-    padding: 10px;
+    margin-right: 30px; /* Abstand zum rechten Rand */
   }
-  
-  /* Header-Menü für größere Bildschirme */
-  .header-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px; /* Breite des Menüs */
-    padding-right: 100px; /* Abstand vom rechten Rand */
-  }
-  
-  .header-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 23px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 400;
-    margin: 0 10px; /* Abstand zwischen den Links */
-  }
-  
-  .header-menu a:hover {
-    color: #70E61C; /* Hover-Farbe für Menü-Links */
-  }
-  
-  /* Responsive Design: Anpassung für kleinere Bildschirme */
-  @media screen and (max-width: 700px) {
-    h1 {
-      padding-left: 30px; /* Weniger Padding für kleinere Bildschirme */
-    }
-  
-    .header-menu {
-      padding-right: 30px; /* Weniger Padding für kleinere Bildschirme */
-    }
-  }
-  
-  @media screen and (max-width: 560px) {
-    .header-menu {
-      display: none; /* Header-Menü verstecken bei kleinen Bildschirmen */
-    }
-  
-    .menu-toggle {
-      display: block; /* Burger-Menü anzeigen */
-      background-color: transparent;
-      border: none;
-      color: white;
-      font-size: 24px; /* Größe des Burger-Menüsymbols */
-      cursor: pointer;
-      margin-right: 30px; /* Abstand zum rechten Rand */
-    }
-  }
-  
+}
