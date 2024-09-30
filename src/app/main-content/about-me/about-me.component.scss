@@ -7,11 +7,11 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1e2a38;
-  
+  background-color: #141D2F;
   background-position: right;
   background-repeat: no-repeat;
   background-size: 600px;
+  border-radius: 0 0 20%;
 }
 
 .about-me {
@@ -206,6 +206,11 @@ html, body {
 
 
 @media (max-width: 600px) {
+
+  .container {
+    border-radius: 0 0 0 0;
+  }
+
   .contact-info {
     margin-left: 26px;
     gap: 20px;
@@ -223,6 +228,7 @@ html, body {
   
   .image-section {
     padding-top: 150px;
+    background-size: 300px;
   }
 
 }

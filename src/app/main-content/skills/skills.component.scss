@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   background-color: #1e2a38;
+  overflow: hidden;
 }
 
 .skills-container {
@@ -12,7 +13,6 @@
   padding: 20px;
   color: white;
   /* Textfarbe */
-
   max-width: 1440px;
   width: 100%;
 }
@@ -100,6 +100,7 @@
   font-size: 60px;
   font-weight: 700;
   margin-top: 0;
+  line-height: 50px;
 }
 
 .skills-section-right .description {

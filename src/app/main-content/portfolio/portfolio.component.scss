@@ -221,6 +221,11 @@
 }
 
 @media (max-width: 1200px) {
+    .portfolio-main {
+        background-position: left 100px top 262px;
+        background-size: 500px;
+    }
+
     .portfolio-header {
         padding-left: 400px;
     }
@@ -230,6 +235,11 @@
 }
 
 @media (max-width: 1128px) {
+    .portfolio-main {
+        background-position: left -100px top 162px;
+        background-size: 500px;
+    }
+
     .portfolio-item {
         gap: 0px;
     }
@@ -273,6 +283,10 @@
 }
 
 @media (max-width: 700px) {
+    .portfolio-main {
+       background-image: none;
+    }
+
 
     .portfolio-header {
         padding-left: 0px;

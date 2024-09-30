@@ -1,32 +1,33 @@
 <div id="skills" class="my-skills">
     <div class="skills-container">
-        <div class="skills">
-            <div class="skills-section">
-                <div class="skill-item" *ngFor="let skill of skills; let last = last">
-                    <img [src]="skill.icon" [alt]="skill.name" class="skill-icon">
-                    <p class="skill-name">{{ skill.name }}</p>
-
-                    <!-- Bild nur im letzten skill-item -->
-                    <div *ngIf="last" class="image-on-hover">
-                        <img src="../../assets/icons/popup.png" alt="Hovered Image">
-                    </div>
-                </div>
+      <div class="skills" data-aos="flip-right"> <!-- Animation für die Skills-Sektion -->
+        <div class="skills-section" data-aos="zoom-in"> <!-- Animation für die Skill-Sektion -->
+          <div class="skill-item" *ngFor="let skill of skills; let last = last">
+            <img [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+            <p class="skill-name">{{ skill.name }}</p>
+  
+            <!-- Bild nur im letzten skill-item -->
+            <div *ngIf="last" class="image-on-hover">
+              <img src="../../assets/icons/popup.png" alt="Hovered Image">
             </div>
+          </div>
         </div>
-
-        <div class="skills-section-right">
-            <div class="header-with-vector">
-                <h1>My skills</h1>
-                <img src="../../assets/vectors/vector_1.png" alt="Vector" class="vector-icon">
-            </div>
-            <p class="description">
-                I have gained experience in building projects with various front end technologies and concepts.
-            </p>
-            <h2>Looking for <span class="highlight">another skill</span>?</h2>
-            <p class="contact-text">
-                Feel free to contact me. I look forward to expanding on my previous knowledge.
-            </p>
-            <button class="get-in-touch" (click)="scrollToSection('contact')">Get in touch</button>
+      </div>
+  
+      <div class="skills-section-right" data-aos="fade-left"> <!-- Animation für die rechte Skill-Sektion -->
+        <div class="header-with-vector">
+          <h1>My skills</h1>
+          <img src="../../assets/vectors/vector_1.png" alt="Vector" class="vector-icon">
         </div>
+        <p class="description">
+          I have gained experience in building projects with various front end technologies and concepts.
+        </p>
+        <h2>Looking for <span class="highlight">another skill</span>?</h2>
+        <p class="contact-text">
+          Feel free to contact me. I look forward to expanding on my previous knowledge.
+        </p>
+        <button class="get-in-touch" (click)="scrollToSection('contact')">Get in touch</button>
+      </div>
     </div>
-</div>
+  </div>
+  
