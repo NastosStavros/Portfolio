@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FooterComponent } from './main-content/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // Hier sollte 'styleUrls' anstelle von 'styleUrl' sein
 })
