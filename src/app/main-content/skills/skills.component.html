@@ -16,18 +16,19 @@
   
       <div class="skills-section-right" data-aos="fade-left"> <!-- Animation für die rechte Skill-Sektion -->
         <div class="header-with-vector">
-          <h1>My skills</h1>
+          <h1>{{ 'skills.title' | translate }}</h1>
           <img src="../../assets/vectors/vector_1.png" alt="Vector" class="vector-icon">
         </div>
         <p class="description">
-          I have gained experience in building projects with various front end technologies and concepts.
+          {{ 'skills.description' | translate }}
         </p>
-        <h2>Looking for <span class="highlight">another skill</span>?</h2>
+        <h2>{{ 'skills.another_skill' | translate }} <span class="highlight">{{ 'skills.highlight' | translate }}</span>?</h2>
         <p class="contact-text">
-          Feel free to contact me. I look forward to expanding on my previous knowledge.
+          {{ 'skills.contact_text' | translate }}
         </p>
-        <button class="get-in-touch" (click)="scrollToSection('contact')">Get in touch</button>
+        <button class="get-in-touch" (click)="scrollToSection('contact')">{{ 'skills.get_in_touch' | translate }}</button>
       </div>
+      
     </div>
   </div>
   

@@ -42,8 +42,8 @@
   transform: rotate(270deg); /* Dreht den Text um 90 Grad im Uhrzeigersinn */
   transform-origin: left top; /* Punkt, um den die Drehung erfolgt */
   color: white;
-  margin-top: 220px;
-  margin-right: -55px;
+  margin-top: 379px;
+  margin-right: -93px;
   font-weight: 400;
 }
 
@@ -101,7 +101,7 @@
   height: 4px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   .hero-text h1 {
     font-size: 60px !important; /* Wichtigkeit erzwingen */
     margin-bottom: 40px;

@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { HttpErrorResponse } from '@angular/common/http';
+import {FormControl, FormGroupDirective, NgForm} from '@angular/forms';
 import {
   FormBuilder,
   FormGroup,
@@ -13,6 +14,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-contact',
@@ -23,16 +26,23 @@ import { RouterModule } from '@angular/router';
     MatInputModule,
     MatCheckboxModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    TranslateModule,
+    
   ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+
+
+
   http = inject(HttpClient);
 
   contactForm: FormGroup;
   matcher = new ErrorStateMatcher();
+
+  messageSent = false;
 
   post = {
     endPoint: 'https://stavros-nastos.com/sendMail.php', // Dein PHP-Skript
@@ -44,13 +54,21 @@ export class ContactComponent {
     },
   };
 
-  constructor(private fb: FormBuilder) {
+  contact: any = {}; // Initialize as an empty object
+
+
+
+  constructor(private fb: FormBuilder, private translateService: TranslateService) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],  // Hier müssen die Validatoren in ein Array gesetzt werden
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]],
       terms: [false, Validators.requiredTrue]
-    });    
+    }); 
+    
+    this.translateService.get('contact').subscribe((translations) => {
+      this.contact = translations; // Set the contact object
+  });
   }
 
   get isFormValid() {
@@ -59,15 +77,19 @@ export class ContactComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactForm.value), this.post.options)
-        .subscribe({
-          next: (response) => {
-            console.log('E-Mail erfolgreich gesendet:', response);
-            this.contactForm.reset(); // Reset the form after submission
-          },
-          error: (error) => {
-            console.error('Fehler beim Senden der E-Mail:', error);
-          }
-        });
+      .subscribe({
+        next: (response) => {
+          console.log('E-Mail erfolgreich gesendet:', response);
+          this.contactForm.reset(); // Reset the form after submission
+          this.messageSent = true; // Show the success message
+          setTimeout(() => {
+            this.messageSent = false; // Hide the message after 3 seconds
+          }, 3000);
+        },
+        error: (error: HttpErrorResponse) => {
+          console.error('Fehler beim Senden der E-Mail:', error);
+        }
+      });
     }
   }
 }

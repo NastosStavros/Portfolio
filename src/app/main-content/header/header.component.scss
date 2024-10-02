@@ -47,6 +47,7 @@ h1 {
 
 .header-menu a:hover {
   color: #70E61C;
+  cursor: pointer;
 }
 
 /* Menü-Button-Styling (Burger-Menü für kleine Bildschirme) */
@@ -113,6 +114,22 @@ h1 {
     color: #70E61C;
     cursor: pointer;
   }
+}
+
+.language-toggle {
+  background: none; /* Kein Hintergrund */
+  border: none; /* Keine Border */
+  color: white; /* Textfarbe */
+  font-size: 24px; /* Schriftgröße */
+  font-weight: bold; /* Fett
+  cursor: pointer; /* Zeiger-Cursor */
+  padding: 10px; /* Innenabstand für etwas mehr Klickfläche */
+  transition: color 0.3s; /* Übergang für die Textfarbe */
+}
+
+.language-toggle:hover {
+  color: #70E61C; /* Hover-Farbe */
+  cursor: pointer;
 }
 
 /* Responsive Design: Anpassung für kleinere Bildschirme */

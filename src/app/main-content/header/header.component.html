@@ -1,22 +1,29 @@
 <div class="header-container">
   <div class="header">
-    <h1>Stavros Nastos</h1>
+    <h1>{{ 'header.title' | translate }}</h1>
     <div class="header-menu">
-      <a (click)="scrollToSection('about-me')">About me</a>
-      <a (click)="scrollToSection('skills')">Skills</a>
-      <a (click)="scrollToSection('portfolio')">Portfolio</a>
+      <a (click)="scrollToSection('about-me')">{{ 'header.about_me' | translate }}</a>
+      <a (click)="scrollToSection('skills')">{{ 'header.skills' | translate }}</a>
+      <a (click)="scrollToSection('portfolio')">{{ 'header.portfolio' | translate }}</a>
+      <button class="language-toggle" (click)="switchLanguage()">
+        {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
+      </button>
     </div>
-    <!-- Button für das Menü bei kleineren Bildschirmen -->
+    
     <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+    <!-- Sprachwechsel-Button -->
+    
   </div>
 
-
-  <!-- Popup-Menü mit Angular-Bindung zur Anzeige/Versteckung -->
   <div id="popup-menu" class="popup-menu" [ngStyle]="{'display': isMenuVisible ? 'block' : 'none'}">
     <div class="popup-menu-content">
-      <a (click)="scrollToSection('about-me'); toggleMenu()">About me</a>
-      <a (click)="scrollToSection('skills'); toggleMenu()">Skills</a>
-      <a (click)="scrollToSection('portfolio'); toggleMenu()">Portfolio</a>
+      <a (click)="scrollToSection('about-me'); toggleMenu()">{{ 'header.about_me' | translate }}</a>
+      <a (click)="scrollToSection('skills'); toggleMenu()">{{ 'header.skills' | translate }}</a>
+      <a (click)="scrollToSection('portfolio'); toggleMenu()">{{ 'header.portfolio' | translate }}</a>
+      <button class="language-toggle" (click)="switchLanguage()">
+        {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
+      </button>
       <button class="close-menu" (click)="toggleMenu()">Close</button>
     </div>
   </div>

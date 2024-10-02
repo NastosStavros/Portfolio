@@ -1,16 +1,20 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NgFor,CommonModule, RouterModule],
+  imports: [NgFor,CommonModule, RouterModule, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  constructor(private translateService: TranslateService) { }
+
   skills = [
     { name: 'HTML', icon: 'assets/icons/html.png' },
     { name: 'CSS', icon: 'assets/icons/css.png' },

@@ -12,7 +12,7 @@
 .contact {
     color: white;
     /* Textfarbe */
-    
+    position: relative;
  
     max-width: 1480px;
     width: 100%;
@@ -244,6 +244,32 @@
         width: 90%; /* Breite des Formulars auf 100% setzen */
     }
 }
+
+.message-sent-container {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+}
+
+.message-sent-container.show {
+    opacity: 1;
+    font-size: 16px;
+    color: #70E61C;
+    position: absolute !important;
+    top: 42%;
+    left: 42%;
+    text-align: center;
+    padding: 20px;
+    background-color: #141D2F;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none; /* Verstecken, wenn nicht angezeigt */
+}
+
 
 @media screen and (max-width: 450px) {
     .contact-container {

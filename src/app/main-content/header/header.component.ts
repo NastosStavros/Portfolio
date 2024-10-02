@@ -1,22 +1,30 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Importiere CommonModule
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, CommonModule], // Füge CommonModule zu den Imports hinzu
+  imports: [RouterModule, CommonModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   isMenuVisible = false; // Menü-Status
 
+  constructor(public translateService: TranslateService) {}
+
   // Funktion zum Anzeigen/Verstecken des Menüs
   toggleMenu() {
     this.isMenuVisible = !this.isMenuVisible;
   }
 
+  // Funktion zum Wechseln der Sprache
+  switchLanguage() {
+    const newLang = this.translateService.currentLang === 'de' ? 'en' : 'de';
+    this.translateService.use(newLang);
+  }
 
   private headerOffsets: { [key: string]: number } = {
     'about-me': 80,
@@ -24,7 +32,7 @@ export class HeaderComponent {
     'portfolio': 30
   };
 
-  // Ändern Sie die scrollToSection-Funktion, um die headerOffset aus dem Objekt zu verwenden
+  // Funktion zum Scrollen zu bestimmten Abschnitten
   scrollToSection(sectionId: string, event?: Event) {
     if (event) {
       event.preventDefault(); // Verhindert das Standard-Verhalten des Links
@@ -32,7 +40,7 @@ export class HeaderComponent {
 
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = this.headerOffsets[sectionId] || 100; // Verwenden Sie die headerOffset aus dem Objekt oder verwenden Sie eine Standardwerte von 100
+      const headerOffset = this.headerOffsets[sectionId] || 100; // Standardwert von 100 verwenden
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
 

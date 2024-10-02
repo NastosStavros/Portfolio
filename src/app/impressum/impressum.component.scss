@@ -43,8 +43,34 @@ h1 {
     width: 100vw; /* Volle Breite */
     background-color: #141D2F; /* Hintergrundfarbe */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 109.03px; /* Höhe des Headers */
     z-index: 1000; /* Stellt sicher, dass der Header über anderen Inhalten liegt */
+  }
+
+  .language-toggle {
+    background: none; /* Kein Hintergrund */
+    border: none; /* Keine Border */
+    color: white; /* Textfarbe */
+    font-size: 24px; /* Schriftgröße */
+    font-weight: bold; /* Fett
+    cursor: pointer; /* Zeiger-Cursor */
+    padding: 10px; /* Innenabstand für etwas mehr Klickfläche */
+    transition: color 0.3s; /* Übergang für die Textfarbe */
+  }
+  
+  .language-toggle:hover {
+    color: #70E61C; /* Hover-Farbe */
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      height: 200px;
+      gap: 20px;
+      padding-top: 50px;
+    }
   }

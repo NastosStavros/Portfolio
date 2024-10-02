@@ -1,0 +1,194 @@
+{
+    "header": {
+        "title": "Stavros Nastos",
+        "about_me": "Über mich",
+        "skills": "Fähigkeiten",
+        "portfolio": "Portfolio",
+        "close_menu": "Schließen",
+        "switch_language": "Sprache wechseln"
+    },
+    "hero": {
+        "intro": "Ich bin",
+        "name": "Stavros Nastos",
+        "job_title": "Frontend-Entwickler",
+        "contact_button": "Kontaktiere mich"
+    },
+    "about_me": {
+        "title": "Über mich",
+        "description": "Ich bin ein Frontend-Entwickler aus Datteln, in der Nähe von Dortmund. Meine Leidenschaft für Technologie und Design treibt mich dazu, dynamische und ansprechende Websites zu erstellen. Durch meine Umschulung zum Softwareentwickler an der Developer Academy habe ich wertvolle Fähigkeiten entwickelt, während ich weiterhin als Sonderpädagoge arbeite. Mein Hintergrund hat mir Anpassungsfähigkeit, Problemlösungsfähigkeiten und Engagement vermittelt – Eigenschaften, die mir sowohl im Unterricht als auch in der Softwareentwicklung zugutekommen.",
+        "info_items": [
+            {
+                "text": "Ich begrüße neue Ideen und suche ständig persönliche Herausforderungen, um mein Wissen und meine Fähigkeiten zu erweitern."
+            },
+            {
+                "text": "Für mich ist Programmierung mehr als nur Codierung – es geht darum, Probleme auf kreative Weise zu lösen. Ich genieße es, komplexe Probleme in benutzerfreundliche Lösungen zu zerlegen, um Ihnen zu helfen, Ihre Ziele zu erreichen und Ihre Ideen in die Realität umzusetzen."
+            }
+        ]
+    },
+    "skills": {
+        "title": "Meine Fähigkeiten",
+        "description": "Ich habe Erfahrung im Bau von Projekten mit verschiedenen Frontend-Technologien und -Konzepten.",
+        "another_skill": "Auf der Suche nach",
+        "highlight": "weiteren Fähigkeiten",
+        "contact_text": "Fühlen Sie sich frei, mich zu kontaktieren. Ich freue mich darauf, mein vorheriges Wissen zu erweitern.",
+        "get_in_touch": "Kontakt aufnehmen"
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "description": "Entdecken Sie eine Auswahl meiner Arbeiten hier - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "items": {
+            "join": {
+                "title": "Join",
+                "tools": "Angular | TypeScript | HTML | CSS | Firebase",
+                "description": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+                "live_test": "Live-Test",
+                "github": "GitHub"
+            },
+            "el_pollo_loco": {
+                "title": "El Pollo Loco",
+                "tools": "JavaScript | HTML | CSS",
+                "description": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Helfen Sie Carlos, Münzen und Tequila-Flaschen zu finden, um gegen die Killer-Hühner zu kämpfen.",
+                "live_test": "Live-Test",
+                "github": "GitHub"
+            }
+        }
+    },
+    "contact": {
+        "header": {
+            "title": "Kontakt"
+        },
+        "info": {
+            "problem": "Hast du ein Problem zu lösen?",
+            "description": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
+            "need_dev": "Brauchst du einen Frontend-Entwickler? Kontaktiere mich!"
+        },
+        "form": {
+            "name": {
+                "label": "Name",
+                "placeholder": "Z. B. Max Mustermann",
+                "minlength_error": "Der Name muss mindestens 3 Zeichen lang sein.",
+                "required_error": "Name ist erforderlich.",
+                "message_sent": "Nachricht gesendet!"
+            },
+            "email": {
+                "label": "E-Mail",
+                "placeholder": "Z. B. pat@example.com",
+                "valid_email": "Bitte gib eine gültige E-Mail-Adresse ein",
+                "required_error": "E-Mail ist erforderlich."
+            },
+            "message": {
+                "label": "Schicke mir eine Nachricht",
+                "placeholder": "Z. B. Hallo, ich interessiere mich für ...",
+                "minlength_error": "Die Nachricht muss mindestens 8 Zeichen lang sein.",
+                "required_error": "Nachricht ist erforderlich."
+            },
+            "terms": {
+                "label": "Ich habe die ",
+                "link": " Datenschutzerklärung gelesen"
+            },
+            "submit_button": "Absenden"
+        }
+    },
+    "impressum": {
+        "header": {
+            "name": "Stavros Nastos",
+            "button": "Zurück zur Startseite"
+        },
+        "title": "Impressum",
+        "address": {
+            "name": "Stavros Nastos",
+            "street": "Bahnhofstrasse 98",
+            "city": "45711 Datteln"
+        },
+        "contact": {
+            "title": "Kontakt",
+            "phone": "Telefon: 01776165752",
+            "email": "E-Mail: n.stavros@outlook.de"
+        },
+        "source": "Quelle:"
+    },
+    "header-privacy": {
+        "title": "Stavros Nastos",
+        "backButton": "Zurück zur Startseite"
+    },
+    "privacy": {
+        "title": "Datenschutzerklärung",
+        "section1": {
+            "title": "1. Datenschutz auf einen Blick",
+            "generalNotes": {
+                "title": "Allgemeine Hinweise",
+                "content": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Detaillierte Informationen zum Thema Datenschutz entnehmen Sie unserer nachfolgenden Datenschutzerklärung."
+            },
+            "dataCollection": {
+                "title": "Datenverarbeitung auf dieser Website",
+                "responsibility": {
+                    "title": "Wer ist verantwortlich für die Datenerfassung auf dieser Website?",
+                    "content": "Die Datenverarbeitung auf dieser Website erfolgt durch den Website-Betreiber. Die Kontaktdaten finden Sie in der Rubrik „Hinweis zur verantwortlichen Stelle“ in dieser Datenschutzerklärung."
+                },
+                "dataCollectionMethods": {
+                    "title": "Wie erfassen wir Ihre Daten?",
+                    "content1": "Ihre Daten werden zum Teil durch Angaben erhoben, die Sie uns mitteilen. Dies kann beispielsweise Daten umfassen, die Sie in ein Kontaktformular eingeben.",
+                    "content2": "Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Dies sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Diese Daten werden automatisch erfasst, sobald Sie diese Website betreten."
+                },
+                "dataUsage": {
+                    "title": "Wofür nutzen wir Ihre Daten?",
+                    "content": "Ein Teil der Daten wird erfasst, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden."
+                },
+                "rights": {
+                    "title": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+                    "content": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben auch das Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Sofern Sie in die Datenverarbeitung eingewilligt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Darüber hinaus haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten unter bestimmten Umständen zu verlangen. Des Weiteren steht Ihnen das Recht zu, sich bei der zuständigen Aufsichtsbehörde zu beschweren."
+                }
+            }
+        },
+        "section2": {
+            "title": "2. Hosting",
+            "content": "Wir hosten die Inhalte unserer Website bei folgendem Anbieter:",
+            "externalHosting": {
+                "title": "Externe Hosting",
+                "content": "Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erhoben werden, werden auf den Servern des/der Hosters gespeichert. Dies können IP-Adressen, Kontaktanfragen, Metadaten und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Webseitenzugriffe und weitere Daten sein, die über eine Website generiert werden.",
+                "purpose": "Das externe Hosting erfolgt zum Zwecke der Erfüllung von Verträgen mit unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebotes durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine Einwilligung eingeholt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, sofern die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z.B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung kann jederzeit widerrufen werden.",
+                "processing": "Unsere/r Hoster werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung ihrer Leistungspflichten erforderlich ist und werden unsere Weisungen zu diesem Daten folgen."
+            }
+        },
+        "section3": {
+            "title": "3. Allgemeine Hinweise und Pflichtinformationen",
+            "dataProtection": {
+                "title": "Datenschutz",
+                "content": "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+                "usage": "Wenn Sie diese Website nutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, die Sie persönlich identifizieren können. Diese Datenschutzerklärung erläutert, welche Daten wir erheben und wie wir sie verwenden. Sie erklärt auch, wie und zu welchem Zweck dies geschieht."
+            },
+            "security": {
+                "title": "Sicherheits Hinweis",
+                "content": "Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich."
+            },
+            "responsibleEntity": {
+                "title": "Hinweis zur verantwortlichen Stelle",
+                "content": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist: Stavros Nastos, Bahnhofstrasse 98, 45711 Datteln. Telefon: 01776165752, E-Mail: n.stavros@outlook.de. Die verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen usw.) entscheidet."
+            },
+            "storageDuration": {
+                "title": "Speicherdauer",
+                "content": "Sofern in dieser Datenschutzerklärung keine spezielle Speicherdauer angegeben ist, bleiben Ihre personenbezogenen Daten bei uns, bis der Zweck der Datenverarbeitung entfällt. Wenn Sie eine rechtmäßige Löschanfrage stellen oder Ihre Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten (z.B. steuerliche oder handelsrechtliche Aufbewahrungsfristen) haben; im letzteren Fall erfolgt die Löschung nach Wegfall dieser Gründe."
+            },
+            "legalBases": {
+                "title": "Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website",
+                "content": "Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO oder Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Kategorien von Daten nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung zur Übermittlung personenbezogener Daten in Drittländer erfolgt die Datenverarbeitung auch auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder den Zugriff auf Informationen in Ihrem Endgerät (z.B. über Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TTDSG. Die Einwilligung kann jederzeit widerrufen werden. Wenn Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich sind, verarbeiten wir Ihre Daten auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Darüber hinaus verarbeiten wir Ihre Daten, wenn dies zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist, auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann auch auf Grundlage unserer berechtigten Interessen nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Die jeweiligen, relevanten Rechtsgrundlagen werden in den folgenden Abschnitten dieser Datenschutzerklärung informiert."
+            },
+            "dataRecipients": {
+                "title": "Empfänger personenbezogener Daten",
+                "content": "Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen zusammen. In einigen Fällen ist die Übermittlung personenbezogener Daten an diese externen Stellen erforderlich. Wir geben personenbezogene Daten nur dann an externe Stellen weiter, wenn dies zur Erfüllung eines Vertrags erforderlich ist, wenn wir gesetzlich dazu verpflichtet sind (z.B. Offenlegung von Daten an die Finanzbehörden), wenn wir ein berechtigtes Interesse an der Offenlegung nach Art. 6 Abs. 1 lit. f DSGVO haben oder wenn eine andere Rechtsgrundlage die Datenübermittlung erlaubt. Bei der Inanspruchnahme von Auftragsverarbeitern geben wir personenbezogene Daten unserer Kunden nur auf Grundlage eines gültigen Auftragsverarbeitungsvertrages weiter. Im Falle einer gemeinsamen Verarbeitung wird ein Vertrag zur gemeinsamen Verarbeitung abgeschlossen."
+            },
+            "withdrawal": {
+                "title": "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+                "content": "Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können Ihre Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt."
+            },
+            "rightToObject": {
+                "title": "Widerspruchsrecht gegen die Datenerfassung in besonderen Fällen sowie gegen die Direktwerbung (Art. 21 DSGVO)",
+                "content": "Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Bei Widerspruch werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen. Wenn wir Ihre personenbezogenen Daten zur Durchführung von Direktwerbung verwenden, haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen; dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht. Wenn Sie widersprechen, werden Ihre personenbezogenen Daten nicht mehr für diese Zwecke verarbeitet. Sie haben die Möglichkeit, den Widerspruch informell zu erklären, z.B. per E-Mail."
+            },
+            "rightToFileComplaint": {
+                "title": "Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde",
+                "content": "Im Falle von Verstößen gegen die DSGVO haben die betroffenen Personen das Recht, bei einer Aufsichtsbehörde Beschwerde einzulegen, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Ortes des angeblichen Verstoßes. Das Recht auf Beschwerde steht unbeschadet anderer verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe zu."
+            }
+        }
+    }
+}

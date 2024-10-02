@@ -2,20 +2,18 @@
 <div class="hero-main">
   <div class="hero">
     <div class="hero-content">
-      <h2 class="vertical-text">I am</h2>
+      <h2 class="vertical-text">{{ 'hero.intro' | translate }}</h2>
       <div class="hero-text">
-        <h1>Stavros Nastos</h1>
-        <h3>Frontend Developer</h3>
-        <button class="hero-button" (click)="scrollToSection('contact')">Contact Me</button>
+        <h1>{{ 'hero.name' | translate }}</h1>
+        <h3>{{ 'hero.job_title' | translate }}</h3>
+        <button class="hero-button" (click)="scrollToSection('contact')">{{ 'hero.contact_button' | translate }}</button>
       </div>
     </div>
-      <div class="icons">
-        <img class="vector" src="../../../assets/vectors/vector_1.png" alt="">
-        <a href="https://github.com/NastosStavros" target="_blank"><img src="assets/icons/github.png" alt="Github"></a>
-        <a target="_blank" (click)="scrollToSection('contact')"><img src="assets/icons/email.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/stavros-nastos-479720324/" target="_blank"><img src="assets/icons/linkedin.png" alt="LinkedIn"></a>
-      </div>
+    <div class="icons">
+      <img class="vector" src="../../../assets/vectors/vector_1.png" alt="">
+      <a href="https://github.com/NastosStavros" target="_blank"><img src="assets/icons/github.png" alt="Github"></a>
+      <a target="_blank" (click)="scrollToSection('contact')"><img src="assets/icons/email.png" alt="E-Mail"></a>
+      <a href="https://www.linkedin.com/in/stavros-nastos-479720324/" target="_blank"><img src="assets/icons/linkedin.png" alt="LinkedIn"></a>
     </div>
   </div>
-  
-
+</div>

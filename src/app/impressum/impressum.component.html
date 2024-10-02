@@ -1,22 +1,21 @@
 <div class="header">
-    <h1>Stavros Nastos</h1>
-    <button class="impressum-button" [routerLink]="['']">Zurück zur Startseite</button>
-  </div>
+  <h1>{{ 'impressum.header.name' | translate }}</h1>
+  <button class="impressum-button" [routerLink]="['']">{{ 'impressum.header.button' | translate }}</button>
+  <button class="language-toggle" (click)="switchLanguage()">
+    {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
+  </button>
+</div>
 
 <div class="impressum">
-    <h1>Impressum</h1>
-  
-    <p>Stavros Nastos<br />
-        Bahnhofstrasse 98<br />
-        45711 Datteln</p>
-  
-    <h2>Kontakt</h2>
-    <p>Telefon: 01776165752<br />
-        E-Mail: n.stavros&#64;outlook.de</p>
-  
-    <p>Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
-  
-    <!-- Button to go back to the main page -->
-   
-  </div>
-  
+  <h1>{{ 'impressum.title' | translate }}</h1>
+
+  <p>{{ 'impressum.address.name' | translate }}<br />
+      {{ 'impressum.address.street' | translate }}<br />
+      {{ 'impressum.address.city' | translate }}</p>
+
+  <h2>{{ 'impressum.contact.title' | translate }}</h2>
+  <p>{{ 'impressum.contact.phone' | translate }}<br />
+      {{ 'impressum.contact.email' | translate }}</p>
+
+  <p>{{ 'impressum.source' | translate }} <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+</div>

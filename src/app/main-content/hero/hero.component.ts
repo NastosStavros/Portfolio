@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; // Importiere CommonModule
-
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+
+  constructor(public translateService: TranslateService) {}
+
+  
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
