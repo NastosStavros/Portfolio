@@ -1,68 +1,72 @@
 <div class="header">
-    <button class="back-button" [routerLink]="['']"><img src="../../assets/icons/arrow_up.png" alt=""></button>
-    <h1>{{ 'header-privacy.title' | translate }}</h1>
-    <button class="language-toggle" (click)="switchLanguage()">
-        {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
-    </button>
+    <div class="header-container">
+        <button class="back-button" [routerLink]="['']"><img src="../../assets/icons/arrow_up.png" alt=""></button>
+        <h1>{{ 'header-privacy.title' | translate }}</h1>
+        <button class="language-toggle" (click)="switchLanguage()">
+            {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
+        </button>
+    </div>
 </div>
 <div class="privacy">
-    <h2>{{ 'privacy.title' | translate }}</h2>
+    <div class="privacy-container">
+        <h2>{{ 'privacy.title' | translate }}</h2>
 
-    <h3>{{ 'privacy.section1.title' | translate }}</h3>
-    <h4>{{ 'privacy.section1.generalNotes.title' | translate }}</h4>
-    <p>{{ 'privacy.section1.generalNotes.content' | translate }}</p>
+        <h3>{{ 'privacy.section1.title' | translate }}</h3>
+        <h4>{{ 'privacy.section1.generalNotes.title' | translate }}</h4>
+        <p>{{ 'privacy.section1.generalNotes.content' | translate }}</p>
 
-    <h4>{{ 'privacy.section1.dataCollection.title' | translate }}</h4>
+        <h4>{{ 'privacy.section1.dataCollection.title' | translate }}</h4>
 
-    <h5>{{ 'privacy.section1.dataCollection.responsibility.title' | translate }}</h5>
-    <p>{{ 'privacy.section1.dataCollection.responsibility.content' | translate }}</p>
+        <h5>{{ 'privacy.section1.dataCollection.responsibility.title' | translate }}</h5>
+        <p>{{ 'privacy.section1.dataCollection.responsibility.content' | translate }}</p>
 
-    <h5>{{ 'privacy.section1.dataCollection.dataCollectionMethods.title' | translate }}</h5>
-    <p>{{ 'privacy.section1.dataCollection.dataCollectionMethods.content1' | translate }}</p>
-    <p>{{ 'privacy.section1.dataCollection.dataCollectionMethods.content2' | translate }}</p>
+        <h5>{{ 'privacy.section1.dataCollection.dataCollectionMethods.title' | translate }}</h5>
+        <p>{{ 'privacy.section1.dataCollection.dataCollectionMethods.content1' | translate }}</p>
+        <p>{{ 'privacy.section1.dataCollection.dataCollectionMethods.content2' | translate }}</p>
 
-    <h5>{{ 'privacy.section1.dataCollection.dataUsage.title' | translate }}</h5>
-    <p>{{ 'privacy.section1.dataCollection.dataUsage.content' | translate }}</p>
+        <h5>{{ 'privacy.section1.dataCollection.dataUsage.title' | translate }}</h5>
+        <p>{{ 'privacy.section1.dataCollection.dataUsage.content' | translate }}</p>
 
-    <h5>{{ 'privacy.section1.dataCollection.rights.title' | translate }}</h5>
-    <p>{{ 'privacy.section1.dataCollection.rights.content' | translate }}</p>
+        <h5>{{ 'privacy.section1.dataCollection.rights.title' | translate }}</h5>
+        <p>{{ 'privacy.section1.dataCollection.rights.content' | translate }}</p>
 
-    <h3>{{ 'privacy.section2.title' | translate }}</h3>
-    <p>{{ 'privacy.section2.content' | translate }}</p>
+        <h3>{{ 'privacy.section2.title' | translate }}</h3>
+        <p>{{ 'privacy.section2.content' | translate }}</p>
 
-    <h4>{{ 'privacy.section2.externalHosting.title' | translate }}</h4>
-    <p>{{ 'privacy.section2.externalHosting.content' | translate }}</p>
-    <p>{{ 'privacy.section2.externalHosting.purpose' | translate }}</p>
-    <p>{{ 'privacy.section2.externalHosting.processing' | translate }}</p>
+        <h4>{{ 'privacy.section2.externalHosting.title' | translate }}</h4>
+        <p>{{ 'privacy.section2.externalHosting.content' | translate }}</p>
+        <p>{{ 'privacy.section2.externalHosting.purpose' | translate }}</p>
+        <p>{{ 'privacy.section2.externalHosting.processing' | translate }}</p>
 
-    <h3>{{ 'privacy.section3.title' | translate }}</h3>
+        <h3>{{ 'privacy.section3.title' | translate }}</h3>
 
-    <h4>{{ 'privacy.section3.dataProtection.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.dataProtection.content' | translate }}</p>
-    <p>{{ 'privacy.section3.dataProtection.usage' | translate }}</p>
+        <h4>{{ 'privacy.section3.dataProtection.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.dataProtection.content' | translate }}</p>
+        <p>{{ 'privacy.section3.dataProtection.usage' | translate }}</p>
 
-    <h4>{{ 'privacy.section3.security.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.security.content' | translate }}</p>
+        <h4>{{ 'privacy.section3.security.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.security.content' | translate }}</p>
 
-    <h4>{{ 'privacy.section3.responsibleEntity.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.responsibleEntity.content' | translate }}</p>
+        <h4>{{ 'privacy.section3.responsibleEntity.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.responsibleEntity.content' | translate }}</p>
 
-    <h4>{{ 'privacy.section3.storageDuration.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.storageDuration.content' | translate }}</p>
+        <h4>{{ 'privacy.section3.storageDuration.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.storageDuration.content' | translate }}</p>
 
-    <h4>{{ 'privacy.section3.legalBases.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.legalBases.content' | translate }}</p>
+        <h4>{{ 'privacy.section3.legalBases.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.legalBases.content' | translate }}</p>
 
-    <h4>{{ 'privacy.section3.dataRecipients.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.dataRecipients.content' | translate }}</p>
+        <h4>{{ 'privacy.section3.dataRecipients.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.dataRecipients.content' | translate }}</p>
 
-    <h4>{{ 'privacy.section3.withdrawal.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.withdrawal.content' | translate }}</p>
+        <h4>{{ 'privacy.section3.withdrawal.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.withdrawal.content' | translate }}</p>
 
-    <h4>{{ 'privacy.section3.rightToObject.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.rightToObject.content' | translate }}</p>
-    <p>{{ 'privacy.section3.rightToObject.advertising' | translate }}</p>
+        <h4>{{ 'privacy.section3.rightToObject.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.rightToObject.content' | translate }}</p>
+        <p>{{ 'privacy.section3.rightToObject.advertising' | translate }}</p>
 
-    <h4>{{ 'privacy.section3.rightToFileComplaint.title' | translate }}</h4>
-    <p>{{ 'privacy.section3.rightToFileComplaint.content' | translate }}</p>
+        <h4>{{ 'privacy.section3.rightToFileComplaint.title' | translate }}</h4>
+        <p>{{ 'privacy.section3.rightToFileComplaint.content' | translate }}</p>
+    </div>
 </div>

@@ -234,6 +234,10 @@ html, body {
 }
 
 @media (max-width: 400px) {
+
+  .about-me-container {
+    margin-top: 120px;
+  }
   .contact-info {
     margin-bottom: 50px;
   }
@@ -243,7 +247,7 @@ html, body {
   }
 
   .about-me {
-    padding-top: 60px;
+    padding-top: 0;
   }
 
   .about-text {
@@ -259,8 +263,8 @@ html, body {
   }
 
   .info-item img {
-    width: 35px;
-    height: 35px;
+    width: 63px;
+    height: 58px;
   }
 
  

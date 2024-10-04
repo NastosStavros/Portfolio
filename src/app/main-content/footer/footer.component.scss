@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 200px;
   padding: 20px 10%;
@@ -10,6 +10,14 @@
   font-family: 'Poppins', sans-serif;
   flex-wrap: wrap; /* Ermöglicht das Umbruchverhalten für kleinere Bildschirme */
   text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
 }
 
 .footer-left,
@@ -86,10 +94,11 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
-  .footer {
+  .footer-container {
     flex-direction: column;
+    gap: 20px;
   }
   .footer-left .name {
     font-size: 22px !important; /* Noch kleinere Schriftgröße für sehr kleine Bildschirme */
@@ -108,11 +117,11 @@
   }
 
   .footer-right {
-    gap: 8px; /* Weiter reduzierter Abstand zwischen den Icons */
+    gap: 40px; /* Weiter reduzierter Abstand zwischen den Icons */
   }
 
   .footer-right .footer-icon {
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
   }
 }

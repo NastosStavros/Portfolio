@@ -1,21 +1,25 @@
 <div class="header">
-  <button class="back-button" [routerLink]="['']"><img src="../../assets/icons/arrow_up.png" alt=""></button>
-  <h1>{{ 'impressum.header.name' | translate }}</h1>
-  <button class="language-toggle" (click)="switchLanguage()">
-    {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
-  </button>
+  <div class="header-container">
+    <button class="back-button" [routerLink]="['']"><img src="../../assets/icons/arrow_up.png" alt=""></button>
+    <h1>{{ 'impressum.header.name' | translate }}</h1>
+    <button class="language-toggle" (click)="switchLanguage()">
+      {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
+    </button>
+  </div>
 </div>
 
 <div class="impressum">
-  <h1>{{ 'impressum.title' | translate }}</h1>
+  <div class="impressum-container">
+    <h1>{{ 'impressum.title' | translate }}</h1>
 
-  <p>{{ 'impressum.address.name' | translate }}<br />
+    <p>{{ 'impressum.address.name' | translate }}<br />
       {{ 'impressum.address.street' | translate }}<br />
       {{ 'impressum.address.city' | translate }}</p>
 
-  <h2>{{ 'impressum.contact.title' | translate }}</h2>
-  <p>{{ 'impressum.contact.phone' | translate }}<br />
+    <h2>{{ 'impressum.contact.title' | translate }}</h2>
+    <p>{{ 'impressum.contact.phone' | translate }}<br />
       {{ 'impressum.contact.email' | translate }}</p>
 
-  <p>{{ 'impressum.source' | translate }} <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+    <p>{{ 'impressum.source' | translate }} <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+  </div>
 </div>

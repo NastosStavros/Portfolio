@@ -1,91 +1,104 @@
 .impressum {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 81vh;
-    background-color: #141D2F;
-    color: white;
-    font-size: 18px;
+  width: 100vw;
+
+}
+
+.impressum-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: #141D2F;
+  color: white;
+  font-size: 18px;
 }
 
 h1 {
-    color: white;
-    font-size: 32px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 700;
-  }
-  
-  /* Header-Styling */
-  .header {
-    position: fixed; /* Fixiert den Header am oberen Bildschirmrand */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Volle Breite */
-    background-color: #141D2F; /* Hintergrundfarbe */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 109.03px; /* Höhe des Headers */
-    z-index: 1000; /* Stellt sicher, dass der Header über anderen Inhalten liegt */
-  }
-
-  .language-toggle {
-    background: none; /* Kein Hintergrund */
-    border: none; /* Keine Border */
-    color: white; /* Textfarbe */
-    font-size: 24px; /* Schriftgröße */
-    font-weight: bold; /* Fett
-    cursor: pointer; /* Zeiger-Cursor */
-    padding: 10px; /* Innenabstand für etwas mehr Klickfläche */
-    transition: color 0.3s; /* Übergang für die Textfarbe */
-  }
-  
-  .language-toggle:hover {
-    color: #70E61C; /* Hover-Farbe */
-    cursor: pointer;
-  }
-
-  .back-button {
-    background-color: none;
-    background: none;
-    color: white;
-    font-size: 22px;
-    border: none;
-    border-radius: 50%;
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: rotate(270deg);
-
-    .img {
-        width: 40px;
-        height: 40px;
-    }
-
-    &:hover {
-        cursor: pointer;
-        color: #70E61C;
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        /* Rotationseffekt beim Hover */
-        transform: rotate(630deg); /* Dreht um 180 Grad */
-    }
-
-    &:active {
-        transform: scale(0.95) rotate(180deg);
-        box-shadow: 0 4px 6px #70E61C;
-    }
+  color: white;
+  font-size: 32px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
 }
 
+.header {
+  width: 99vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #141D2F;
+  /* Hintergrundfarbe */
+}
 
+/* Header-Styling */
+.header-container {
+  max-width: 1440px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #141D2F;
+  /* Hintergrundfarbe */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 109.03px;
+  /* Höhe des Headers */
+  z-index: 1000;
+  /* Stellt sicher, dass der Header über anderen Inhalten liegt */
+  padding: 0 40px;
+}
 
+.language-toggle {
+  background: none;
+  /* Kein Hintergrund */
+  border: none;
+  /* Keine Border */
+  color: white;
+  /* Textfarbe */
+  font-size: 24px;
+  /* Schriftgröße */
+  font-weight: bold;
+  /* Fett
+    cursor: pointer; /* Zeiger-Cursor */
+  padding: 10px;
+  /* Innenabstand für etwas mehr Klickfläche */
+  transition: color 0.3s;
+  /* Übergang für die Textfarbe */
+}
 
+.language-toggle:hover {
+  color: #70E61C;
+  /* Hover-Farbe */
+  cursor: pointer;
+}
 
-  @media screen and (max-width: 500px) {
-    .header {
-      flex-direction: column;
-      align-items: center;
-      height: 200px;
-      gap: 20px;
-      padding-top: 50px;
-    }
+.back-button {
+  background-color: none;
+  background: none;
+  color: white;
+  font-size: 22px;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: rotate(270deg);
+
+  .img {
+    width: 40px;
+    height: 40px;
   }
+
+  &:hover {
+    cursor: pointer;
+    color: #70E61C;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Rotationseffekt beim Hover */
+    transform: rotate(630deg);
+    /* Dreht um 180 Grad */
+  }
+
+  &:active {
+    transform: scale(0.95) rotate(180deg);
+    box-shadow: 0 4px 6px #70E61C;
+  }
+}

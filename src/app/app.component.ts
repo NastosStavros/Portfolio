@@ -6,11 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FooterComponent } from './main-content/footer/footer.component';
+import { HeaderComponent } from "./main-content/header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent],
+  imports: [RouterOutlet, FooterComponent, HeaderComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // Hier sollte 'styleUrls' anstelle von 'styleUrl' sein
 })
