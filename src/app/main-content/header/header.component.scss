@@ -62,16 +62,13 @@ h1 {
   top: 109px; /* Direkt unter dem Header */
   right: 0; /* Am rechten Rand des Bildschirms */
   width: 100%; /* Breite des Popup-Menüs */
-  background-color: rgba(20, 29, 47, 0.8); /* Hintergrundfarbe */
+  background-color: rgba(20, 29, 47, 1); /* Hintergrundfarbe */
   padding: 20px; /* Innenabstand */
   z-index: 9999; /* Höherer z-index, damit es über anderen Elementen liegt */
-  transition: opacity 0.3s ease; /* Weicher Übergang für das Einblenden */
-  
 }
 
 /* Klasse für sichtbares Popup-Menü */
 .popup-menu.show {
-  opacity: 1; /* Volle Sichtbarkeit */
   pointer-events: auto; /* Klicks aktivieren */
 }
 
@@ -79,8 +76,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  justify-content: start;
+  height: 64vh;
+  justify-content: space-around;
 }
 
 /* Links im Popup-Menü */
@@ -116,6 +113,12 @@ h1 {
   }
 }
 
+.popup-menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .language-toggle {
   background: none; /* Kein Hintergrund */
   border: none; /* Keine Border */
@@ -124,10 +127,14 @@ h1 {
   font-weight: bold; /* Fett
   cursor: pointer; /* Zeiger-Cursor */
   padding: 10px; /* Innenabstand für etwas mehr Klickfläche */
-  transition: color 0.3s; /* Übergang für die Textfarbe */
+  transition: color 0.3s, background-color 0.3s; /* Übergang für die Textfarbe */
+  background-color: #70E61C;
+  border-radius: 5px;
+
 }
 
 .language-toggle:hover {
+  background-color: #141D2F;
   color: #70E61C; /* Hover-Farbe */
   cursor: pointer;
 }

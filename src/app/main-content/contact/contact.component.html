@@ -10,6 +10,10 @@
                 <p>{{ 'contact.info.description' | translate }}</p>
                 <p [innerHTML]=" 'contact.info.need_dev' | translate "></p>
             </div>
+            <div>
+
+                <button (click)="scrollToTop()" class="scroll-up-button"><img src="../../assets/icons/arrow_up.png" alt=""></button>
+            </div>
             <form class="example-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                 <mat-form-field class="example-full-width">
                     <mat-label>{{ 'contact.form.name.label' | translate }}</mat-label>

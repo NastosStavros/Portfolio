@@ -74,6 +74,10 @@ export class ContactComponent {
     });
   }
 
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   public removeValidators() {
     this.contactForm.get('name')?.clearValidators();
     this.contactForm.get('email')?.clearValidators();

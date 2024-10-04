@@ -18,12 +18,14 @@
 
   <div id="popup-menu" class="popup-menu" [ngStyle]="{'display': isMenuVisible ? 'block' : 'none'}">
     <div class="popup-menu-content">
-      <a (click)="scrollToSection('about-me'); toggleMenu()">{{ 'header.about_me' | translate }}</a>
-      <a (click)="scrollToSection('skills'); toggleMenu()">{{ 'header.skills' | translate }}</a>
-      <a (click)="scrollToSection('portfolio'); toggleMenu()">{{ 'header.portfolio' | translate }}</a>
       <button class="language-toggle" (click)="switchLanguage()">
         {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
       </button>
+      <div class="popup-menu-links">
+      <a (click)="scrollToSection('about-me'); toggleMenu()">{{ 'header.about_me' | translate }}</a>
+      <a (click)="scrollToSection('skills'); toggleMenu()">{{ 'header.skills' | translate }}</a>
+      <a (click)="scrollToSection('portfolio'); toggleMenu()">{{ 'header.portfolio' | translate }}</a>
+    </div>
       <button class="close-menu" (click)="toggleMenu()">Close</button>
     </div>
   </div>

@@ -3,17 +3,18 @@
     align-items: center;
     justify-content: center;
     background-color: #1e2a38;
-       /* Abstand oben und unten, 10% Abstand links und rechts */
-       background-image: url('../../../assets/backgrounds/purple2.png');
-       background-position: right -300px top 0px;
-       background-repeat: no-repeat;
-       background-size: contain;
+    /* Abstand oben und unten, 10% Abstand links und rechts */
+    background-image: url('../../../assets/backgrounds/purple2.png');
+    background-position: right -300px top 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+
 .contact {
     color: white;
     /* Textfarbe */
     position: relative;
- 
+
     max-width: 1480px;
     width: 100%;
     /* Verhindert Overflow innerhalb dieses Containers */
@@ -52,7 +53,7 @@
     gap: 20px;
     /* Abstand zwischen Info und Formular */
     margin-bottom: 100px;
- 
+
 }
 
 .contact-info {
@@ -226,22 +227,71 @@
     }
 }
 
+
+.scroll-up-button {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    background-color: none;
+    background: none;
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    /* Initiale Transformation */
+    transform: scale(1);
+    /* Schlagschatten für den Button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .img {
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        /* Farbwechsel und Skalierung */
+        transform: scale(1.2);
+        color: #70E61C; /* Farbe beim Hover */
+        /* Vergrößerung des Schlagschattens */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        /* Rotationseffekt */
+        transform: scale(1.2) rotate(360deg);
+    }
+
+    &:active {
+        transform: scale(0.95);
+        box-shadow: 0 4px 6px #70E61C;
+    }
+}
+
 @media (max-width: 645px) {
-   
+
 
     .contact-content {
-        flex-direction: column; /* Ändert die Ausrichtung auf Spaltenrichtung */
-        align-items: center; /* Zentriert den Inhalt */
+        flex-direction: column;
+        /* Ändert die Ausrichtung auf Spaltenrichtung */
+        align-items: center;
+        /* Zentriert den Inhalt */
+    }
+
+    .scroll-up-button {
+        display: none;
     }
 
     .contact-info {
-        width: 90%; /* Breite der Textsektion auf 100% setzen */
-        text-align: center; /* Text zentrieren */
-        margin-bottom: 20px; /* Abstand unter dem Text */
+        width: 90%;
+        /* Breite der Textsektion auf 100% setzen */
+        text-align: center;
+        /* Text zentrieren */
+        margin-bottom: 20px;
+        /* Abstand unter dem Text */
     }
 
     .example-form {
-        width: 90%; /* Breite des Formulars auf 100% setzen */
+        width: 90%;
+        /* Breite des Formulars auf 100% setzen */
     }
 }
 
@@ -267,8 +317,11 @@
 }
 
 .hidden {
-    display: none; /* Verstecken, wenn nicht angezeigt */
+    display: none;
+    /* Verstecken, wenn nicht angezeigt */
 }
+
+
 
 
 @media screen and (max-width: 450px) {

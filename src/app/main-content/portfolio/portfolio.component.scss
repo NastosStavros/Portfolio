@@ -13,6 +13,7 @@
 .portfolio {
     width: 100%;
     max-width: 1480px;
+    padding-top: 100px;
 }
 
 .portfolio-header {
@@ -246,9 +247,15 @@
 }
 
 @media (max-width: 940px) {
+
+
     .portfolio-header {
         padding-top: 0px;
         padding-left: 310px;
+    }
+
+    .portfolio {
+        padding-top: 200px;
     }
 
     .portfolio-item {
@@ -285,6 +292,10 @@
 @media (max-width: 700px) {
     .portfolio-main {
        background-image: none;
+    }
+
+    .portfolio {
+        padding-top: 100px;
     }
 
 

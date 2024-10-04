@@ -4,3 +4,32 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Gesamtbreite der Scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Breite der vertikalen Scrollbar */
+    height: 12px; /* Höhe der horizontalen Scrollbar */
+  }
+  
+  /* Hintergrund der Scrollbar (Track) */
+  ::-webkit-scrollbar-track {
+    background: #141D2F; /* Farbe des Scrollbereichs-Hintergrunds */
+  }
+  
+  /* Griff der Scrollbar (Thumb) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #70E61C; /* Farbe des Scrollgriffs */
+    border-radius: 10px; /* Abgerundete Ecken für den Griff */
+    border: 3px solid #141D2F; /* Abstand um den Scrollgriff herum */
+  }
+  
+  /* Scrollbar-Griff beim Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #9747FF; /* Ändert die Farbe des Griffs beim Hover */
+  }
+  
+  /* Scrollbar-Griff beim aktiven Zustand (z. B. bei Klick) */
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #60C91E; /* Ändert die Farbe des Griffs beim Klicken */
+  }
+  

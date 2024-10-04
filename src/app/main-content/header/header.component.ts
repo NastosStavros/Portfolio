@@ -20,6 +20,8 @@ export class HeaderComponent {
     this.isMenuVisible = !this.isMenuVisible;
   }
 
+  
+
   // Funktion zum Wechseln der Sprache
   switchLanguage() {
     const newLang = this.translateService.currentLang === 'de' ? 'en' : 'de';

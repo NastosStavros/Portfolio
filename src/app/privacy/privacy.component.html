@@ -1,6 +1,6 @@
 <div class="header">
+    <button class="back-button" [routerLink]="['']"><img src="../../assets/icons/arrow_up.png" alt=""></button>
     <h1>{{ 'header-privacy.title' | translate }}</h1>
-    <button class="back-button" [routerLink]="['']">{{ 'header-privacy.backButton' | translate }}</button>
     <button class="language-toggle" (click)="switchLanguage()">
         {{ translateService.currentLang === 'de' ? 'EN' : 'DE' }}
     </button>
